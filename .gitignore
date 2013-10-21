@@ -1,0 +1,9 @@
+*.html
+*.swp
+*.o
+*.lss
+/GRs
+**/solution
+gdb.txt
+labs/lab3/spi
+labs/lab4/spi
