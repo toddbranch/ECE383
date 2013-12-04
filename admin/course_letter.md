@@ -79,9 +79,9 @@ I welcome any bug fixes / useful additions - please file bug reports or send pul
 
 ### Miscellaneous
 
-This course is designed to help you in your development as an electrical and computer engineer.  Feel free to provide feedback on the lessons and labs at any time.  If you have ideas to improve or enhance the course, please let me know.  The class builds on concepts from the prerequisites, so it's important that you seek help as soon as you need it.  Procrastination is truly the enemy in an assembly language course.  A little foresight and planning and a lot of effort will result in an extremely rewarding experience serving as the basis for future microcontroller work.
+This course is designed to help in your development as a computer or an electrical engineer. As such, we introduce economic considerations as well as manufacturability and sustainability during the first half of the semester and re-emphasize these as we progress through the semester. Feel free to provide feedback on the lessons and labs at any time. If you have ideas to improve or enhance the course, please let me know. The class builds on concepts from the prerequisites so it is important for you to seek help as soon as you need it. Procrastination is truly the enemy in a hardware design course. A little foresight and planning and a lot of effort will result in an extremely rewarding experience serving as the basis for future microprocessor design work.
 
 Good luck!
 
 TODD T. BRANCHFLOWER, Capt, USAF  
-Course Director, ECE 382
+Course Director, ECE 383

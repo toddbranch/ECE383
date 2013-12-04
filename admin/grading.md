@@ -21,6 +21,7 @@ All grading will be performed in Q2i.
 **You must complete the required functionality for every lab (even for zero credit) to pass the course.**
 
 | Grade | Max (Exclusive) | Min (Inclusive) |
+| :-: | :-: | :-: |
 | A | 100 | 90 |
 | A |- 90 | 87 |
 | B |+ 87 | 84 |
@@ -34,7 +35,7 @@ All grading will be performed in Q2i.
 
 ## Late Work
 
-If problems arise with graded assignments, see your instructor in advance.  Assignments turned in later than the due date without prior permission from the instructor will be penalized as follows (note there is no distinction between "Duty Day" or "Day":
+All work is due as shown on the assignment or specified by your instructor.  If problems arise with graded assignments, see your instructor in advance.  Assignments turned in later than the due date without prior permission from the instructor will be penalized as follows (note there is no distinction between "Duty Day" or "Day":
 
 | How Late? | Penalty |
 | :-: | :-: |
