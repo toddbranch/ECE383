@@ -34,15 +34,15 @@ title = 'Embedded Systems II'
 | L26 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/remote_terminal.docx) | | |
 | L27 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/remote_terminal.docx) | | |
 | L28 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/remote_terminal.docx) | | |
-| L29 | Register Transfer Methodology [1](/notes/L29/L11_register_transfer_methodology.pptx), [2](/notes/L29/L11_register_transfer_methodology.pptx) | | |
-| L30 | Timing Analysis [1](/notes/L30/L11_timing.pptx), [2](/notes/L30/L12_timing.pptx) | | |
-| L31 | Clock and Synchronization [1](/notes/L31/L12_clock_and_synchronization.pptx), [2](/notes/L31/L13_clock_and_synchronization.pptx) | | |
+| L29 | [Register Transfer Methodology](/notes/L29/register_transfer_methodology.pptx) | | |
+| L30 | [Timing Analysis](/notes/L30/timing.pptx) | | |
+| L31 | [Clock and Synchronization](/notes/L31/clock_and_synchronization.pptx) | | |
 | L32 | GR #2 | | |
-| L33 | [Final Project](/labs/final_project.docx) | | |
-| L34 | [Final Project](/labs/final_project.docx) | | |
-| L35 | [Final Project](/labs/final_project.docx) | | |
-| L36 | [Final Project](/labs/final_project.docx) | | |
-| L37 | [Final Project](/labs/final_project.docx) | | |
-| L38 | [Final Project](/labs/final_project.docx) | | |
-| L39 | [Final Project](/labs/final_project.docx) | | |
+| L33 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L34 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L35 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L36 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L37 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L38 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
+| L39 | [Lab 5 - Final Project](/labs/final_project.docx) | | |
 | L40 | Final Presentation | | |
