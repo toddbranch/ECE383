@@ -1,4 +1,4 @@
-title = 'Embedded Systems II'
+title = 'Embedded Systems II with the Digilent Atlys'
 
 # ECE383 - Embedded Systems II
 
