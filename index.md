@@ -2,6 +2,8 @@ title = 'Embedded Systems II'
 
 # ECE383 - Embedded Systems II
 
+TEST
+
 **Find a problem?  The source behind this site is available on Github: [file a bug report or send me a pull request!](https://github.com/toddbranch/ECE383/issues)**
 
 | Lesson | Topic | Assigned | Due |
