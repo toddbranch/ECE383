@@ -6,7 +6,7 @@ title = 'Embedded Systems II with the Digilent Atlys'
 
 | Lesson | Topic | Assigned | Due |
 | :-: | :-: | :-: | :-: | :-: |
-| [L1](/notes/L1/index.html) | [Intro to Digital System Design](/notes/L1/intro_to_digital_system_design.pptx) | [L1 Assignment](/notes/L1/L1_HW.docx) | |
+| [L1](/notes/L1/index.html) | [Intro to Digital System Design](http://slides.ECE383.com/ECE383_slides/L1) | [L1 Assignment](/notes/L1/L1_HW.docx) | |
 | [L2](/notes/L2/index.html) | [HDL Overview](/notes/L2/HDL_Overview.pptx) | [L2 Assignment](/notes/L2/L2_HW.docx) | [L1 Assignment](/notes/L1/L1_HW.docx) |
 | [L3](/notes/L3/index.html) | [Basic Language Constructs of VHDL](/notes/L3/basic_language_constructs_of_vhdl.pptx) | [L3 Assignment](/notes/L3/L3_HW.docx) | [L2 Assignment](/notes/L2/L2_HW.docx) |
 | [L4](/notes/L4/index.html) | [Combinational Circuits in VHDL](/notes/L4/combinational_circuits_in_vhdl.pptx) | [L4 Assignment](/notes/L4/L4_HW.docx) | [L3 Assignment](/notes/L3/L3_HW.docx) |
