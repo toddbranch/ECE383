@@ -12,7 +12,7 @@
   ![Circuit](logic_circuit.jpg)
 4. [1.4] What is abstraction? Why is it important for digital system design?
 5. [1.5] What is the difference between testing and verification?
-6. Install and test the latest Xilinx ISE: \\\dfec\classes\software\xilinx
+6. Install and test the latest Xilinx ISE: \\\dfec-lic1\classes\software\xilinx
 
 ## Turn-In Requirements
 
