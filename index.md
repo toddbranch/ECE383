@@ -8,8 +8,8 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | :-: | :-: | :-: | :-: | :-: |
 | [L1](/notes/L1/index.html) | [Intro to Digital System Design](http://slides.ECE383.com/ECE383_slides/L1) | [L1 Assignment](/notes/L1/L1_HW.html) | |
 | [L2](/notes/L2/index.html) | [HDL Overview](http://slides.ECE383.com/ECE383_slides/L2)| [L2 Assignment](/notes/L2/L2_HW.html) | [L1 Assignment](/notes/L1/L1_HW.html) |
-| [L3](/notes/L3/index.html) | [Basic Language Constructs of VHDL](/notes/L3/basic_language_constructs_of_vhdl.pptx) | [L3 Assignment](/notes/L3/L3_HW.docx) | [L2 Assignment](/notes/L2/L2_HW.html) |
-| [L4](/notes/L4/index.html) | [Combinational Circuits in VHDL](/notes/L4/combinational_circuits_in_vhdl.pptx) | [L4 Assignment](/notes/L4/L4_HW.docx) | [L3 Assignment](/notes/L3/L3_HW.docx) |
+| [L3](/notes/L3/index.html) | [Basic Language Constructs of VHDL](/notes/L3/basic_language_constructs_of_vhdl.pptx) | [L3 Assignment](/notes/L3/L3_HW.html) | [L2 Assignment](/notes/L2/L2_HW.html) |
+| [L4](/notes/L4/index.html) | [Combinational Circuits in VHDL](/notes/L4/combinational_circuits_in_vhdl.pptx) | [L4 Assignment](/notes/L4/L4_HW.docx) | [L3 Assignment](/notes/L3/L3_HW.html) |
 | [L5](/notes/L5/index.html) | [Sequential Circuits in VHDL](/notes/L5/sequential_circuits_in_vhdl.pptx) | [L5 Assignment](/notes/L5/L5_HW.docx) | [L4 Assignment](/notes/L4/L4_HW.docx) |
 | [L6](/notes/L6/index.html) | [Writing VHDL Test Benches](/notes/L6/writing_vhdl_test_benches.pptx) | [L6 Assignment](/notes/L6/L6_HW.docx) | [L5 Assignment](/notes/L5/L5_HW.docx) |
 | [L7](/notes/L7/index.html) | [Hierarchical and Testable Design in VHDL](hierarchical_and_testable_design_in_vhdl.pptx) | [L7 Assignment](/notes/L7/L7_HW.docx) | [L6 Assignment](/notes/L6/L6_HW.docx) |
