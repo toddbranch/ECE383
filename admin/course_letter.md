@@ -71,7 +71,7 @@ All exams are closed textbook and notes.  Cadets are allowed to use only the pro
 
 ### Course Materials
 
-All of the course materials are open and available in a git repo on Github - [http://github.com/toddbranch/ECE382.git](http://github.com/toddbranch/ECE382.git).
+All of the course materials are open and available in a git repo on Github - [http://github.com/toddbranch/ECE383.git](http://github.com/toddbranch/ECE383.git).
 
 You're free to use it as-is or fork the repo and modify it to suit your own purposes.
 
