@@ -10,9 +10,9 @@
 4. [3.3] What is a strongly-typed language?
 5. [3.4] What is the limitation of using the bit data type to represent a physical signal?
 6. [3.5] Assume that a is a 10-bit signal with the `std_logic_vector(9 downto 0)` data type. List the 10 bits assigned to the `a` signal.
-  a. a <= (others => '1');
-  b. a <= (1|3|5|7|9 => '1', others => '0');
-  c. a <= (9|7|2 => '1', 6 => '0', 0 => '1', 1|5|8 => '0', 3|4 => '0');
+  1. a <= (others => '1');
+  2. a <= (1|3|5|7|9 => '1', others => '0');
+  3. a <= (9|7|2 => '1', 6 => '0', 0 => '1', 1|5|8 => '0', 3|4 => '0');
 7. [3.6] Assume that `a` and `y` are 8-bit signals with the `std_logic_vector(7 downto 0)` data type. If the signals are interpreted as unsigned numbers, the following assignment statement performs `a / 8`. Explain.
 ```vhdl
 y <= "000" & a(7 downto 3); 
