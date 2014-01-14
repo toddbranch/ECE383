@@ -3,7 +3,7 @@
 1. [4.1] Add an enable signal, en, to a 2-to-4 decoder. When `en` is '1', the decoder functions as usual. When `en` is '0', the decoder is disabled and output becomes "0000". Use the conditional signal assignment statement to derive this circuit. Draw the conceptual diagram.
 2. [4.2] Repeat Problem 4.1, but use the selected signal assignment statement instead.
 3. [4.3] Consider a 2-by-2 switch. It has two input data ports, x(0) and x(1), and a 2-bit control signal, ctrl. The input data are routed to output ports y(0) and y(1) according to the ctrl signal. The function table is specified below.
-  a. Use concurrent signal assignment statements to derive the circuit.
+  1. Use concurrent signal assignment statements to derive the circuit.
 
 | ctrl | y1 | y0 | Function |
 | :-: | :-: | :-: | :-: |
