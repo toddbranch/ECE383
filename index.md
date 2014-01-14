@@ -18,9 +18,9 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | L10 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
 | L11 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
 | L12 | VGA Review, Pong Introduction | | |
-| L13 | [Lab 2 - Pong](/labs/pong.docx) | | |
-| L14 | [Lab 2 - Pong](/labs/pong.docx) | | |
-| L15 | [Lab 2 - Pong](/labs/pong.docx) | | |
+| L13 | [Lab 2 - Pong](/labs/lab2) | | |
+| L14 | [Lab 2 - Pong](/labs/lab2) | | |
+| L15 | [Lab 2 - Pong](/labs/lab2) | | |
 | L16 | Pong Review, Font Controller Introduction | | |
 | L17 | [Lab 3 - Font Controller](/labs/font_controller.docx) | | |
 | L18 | [Lab 3 - Font Controller](/labs/font_controller.docx) | | |

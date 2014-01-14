@@ -2,8 +2,8 @@ title = 'Labs'
 
 # Labs
 
-- [Lab 1 - Video Synchronization](/labs/video_synchronization.docx)
-- [Lab 2 - Pong](/labs/pong.docx)
+- [Lab 1 - Video Synchronization](/labs/lab1)
+- [Lab 2 - Pong](/labs/lab2)
 - [Lab 3 - Font Controller](/labs/font_controller.docx)
 - [Lab 4 - Remote Terminal](/labs/remote_terminal.docx)
 - [Lab 5 - Final Project](/labs/final_project.docx)
