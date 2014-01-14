@@ -14,9 +14,9 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | [L6](/notes/L6/index.html) | [Writing VHDL Test Benches](http://slides.ECE383.com/ECE383_slides/L6) | [L6 Assignment](/notes/L6/L6_HW.html) | [L5 Assignment](/notes/L5/L5_HW.html) |
 | [L7](/notes/L7/index.html) | [Hierarchical and Testable Design in VHDL](http://slides.ECE383.com/ECE383_slides/L7)| [L7 Assignment](/notes/L7/L7_HW.html) | [L6 Assignment](/notes/L6/L6_HW.html) |
 | [L8](/notes/L8/index.html) | [Finite State Machines](/notes/L8/finite_state_machines.pptx) | [L8 Assignment](/notes/L8/L8_HW.html) | [L7 Assignment](/notes/L7/L7_HW.html) |
-| L9 | [Lab 1 - VGA Synchronization](/labs/video_synchronization.docx) | | [L8 Assignment](/notes/L8/L8_HW.html) |
-| L10 | [Lab 1 - VGA Synchronization](/labs/video_synchronization.docx) | | |
-| L11 | [Lab 1 - VGA Synchronization](/labs/video_synchronization.docx) | | |
+| L9 | [Lab 1 - VGA Synchronization](/labs/lab1) | | [L8 Assignment](/notes/L8/L8_HW.html) |
+| L10 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
+| L11 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
 | L12 | VGA Review, Pong Introduction | | |
 | L13 | [Lab 2 - Pong](/labs/pong.docx) | | |
 | L14 | [Lab 2 - Pong](/labs/pong.docx) | | |
