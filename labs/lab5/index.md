@@ -1,138 +1,162 @@
-title = 'Lab 6 - PWM - "Robot Motion"'
+# Lab 5 - Final Project
 
-# Lab 6 - PWM - "Robot Motion"
+## Overview
 
-[Teaching Notes](notes.html)
+For the final project, you must propose your own project, develop a sign-off schedule, design/build/test your design, and provide a final report/presentation.  Your final project must fall under one of the following categories:
 
-**[A Note On Robot Sharing](other_peoples_robots.html)**
+1. Design/Implement a digital system that uses both a microprocessor and hardware.
+  1. Both the microprocessor and hardware portions of the project should be non-trivial.  Just using the hardware for UART, GPIO, or collision detection would be considered trivial.
+  2. The design must have at least one input and one output source.
+  3. You can easily fit multiple Picoblaze cores on our FPGA.
+  4. Consider using a MicroBlaze core if you need a more powerful microprocessor.  You can then code in C and compile the code without having to reimplement the entire FPGA design.
+2. Microprocessor Implementation - design/ implement a non-trivial microprocessor.
+  1. You may use a previously defined ISA (e.g., MSP430, ARM, MIPS, SPARC, PowerPC, AVR, etc.).
+  2. Write a non-trivial program to test all the instructions available.
+  3. Interface the microprocessor with external hardware to demonstrate input/output capabilities.
 
-## Lab Overview
+## Grading Criteria
 
-This lab is designed to provide you with experience using the pulse-width modulation features of the MSP430.  You will need to program the MSP430 to generate pulse-width-modulated waveforms to control the speed / direction of your robot's motors.  In this lab, you will make your robot move forward, backwards, a small (< 45 degree) turn left/right, and a large (> 45 dgree) turn left/right.
+Your grade will be based on the following criteria:
 
-## Driving Motors
+1. Complexity of your hardware and software design.
+2. Quality of your documentation in the final report and presentation.
+3. Amount of effort demonstrated in class.
+4. Functionality of project based on the deadlines and requirements you set.
 
-Our mobile robots have DC motors to drive the wheels.  The amount of torque provided by the motor is directly proportional to the amount of voltage provided.  Therefore, there are two ways of varying the speed of the DC motors:
+## Final Project Hints
 
-1. Provide an analog voltage where the magnitude is proportional to the output torque desired.
-2. Provide a PWM signal where the duty cycle provides an "average" voltage proportional to the output torque desired.  This is shown if Figure 1.
+- A wide variety of example final projects can be found on Cornell’s ECE 5760 course webpage.  Here are a few examples:
+  - Implement a simple sprite-based video game.
+  - Use double frame-buffering to implement the ability to draw primitive shapes to a VGA screen.
+  - Add real-time filtering and effects to an audio or video stream.
+  - Implement a subsystem from your capstone project.
+  - Use an Ethernet cable to communicate useful information between your FPGA and a computer.
+- Other courses with good example projects:
+  - http://web.mit.edu/6.111/www/
+  - http://ece545.com/F12/index.html
+- Talk to your instructor if you need a more powerful FPGA.
 
-![PWM to Motor](pwm_to_motor.png)
 
-Figure 1: The PWM signal creates a certain duty cycle which will provide an "average" voltage to the motor.  This average voltage is proportional to the motor's output torque.
+Final Project Sign-Off Sheet
+Name: ______________________________
+Final Project Proposal - Draft
+Due BOC Final Project Lesson 1
+#
+Task Description
+Date
+Time
+Sign-Off
+0.1
+Schedule (similar to the sign-off sheet we used for each of our labs) describing deadlines for you to demonstrate project functionality for various subsystems and the final overall design.
 
-The motor can move in two directions.  If you ground one terminal of the motor and connect the PWM signal to the other side of the terminal, then the motor shaft moves in one direction.  If you swap the terminals, the motor will move in the opposite direction.
 
-You might want to program your robot so it turns like a tank; one wheel moves forward while the other one reverses.  You will have to experiment with your robot to find out how long the PWM signal needs to be provided to turn an appropriate amount.
 
-## Required Functionality
+0.2
+A brief paragraph (or a few sentences) describing the big picture of what your final project will do.
 
-Demonstrate movement forward, backwards, a small (< 45 degree) turn left/right, and a large (> 45 dgree) turn left/right.  The robot should perform these movements sequentially, completely disconnected from a computer (no USB cord).
 
-## B Functionality
 
-Release a robot movement library on Github.  Document your interface and provide sample code using the library functions in a README.
+0.3
+Bullet list of the requirements your final project will meet for “minimum functionality” and “full functionality.”
 
-## A Functionality
 
-Use input capture to count PWM periods instead of `_delay_cycles()` to determine the length of your movement elements.
 
-You can use a dedicated PWM signal for timing - this is probably the easiest approach.
+Final Project Proposal - Finalized
+Due BOC Final Project Lesson 2
+#
+Task Description
+Date
+Time
+Sign-Off
+1.1
+All items above must be finalized and signed off by your instructor.
 
-## Prelab
 
-Paste the grading section in your lab notebook as the first page of this lab.
 
-Include whatever information from this lab you think will be useful in creating your program.
+Final Project Presentation
+Due BOC Lesson 40
+Your final presentation should last between 5 to 10 minutes (including demo and Q&A) and must include the following:
+Introduction – Provide a brief overview of the problem.  Include the minimum and full functionality requirements.
+Implementation – Provide high-level block-diagram of your solution and briefly describe in words how you implemented each the modules.
+Test/Debug – Briefly describe the methods used to verify system functionality.  List the major problems you encountered and how you fixed them.
+Demonstration – If you had any success with your final project, include a demonstration of your current functionality.  If 
+Conclusion – Explain what your learned from this final project and what changes you would recommend in future years to this final project or the lectures leading up to this final project.
+Final Project Documentation
+Due COB Lesson 40
+Your final project report must include the following:
+Introduction – Provide a brief overview of the problem.
+Implementation – Provide high-level block-diagram of your solution and briefly describe in words how you implemented each the modules.  Commented VHDL code and simulation screenshots should be included in an appendix.
+Test/Debug – Briefly describe the methods used to verify system functionality.  List the major problems you encountered and how you fixed them.  If your final project did not meet all the requirements, you need to include a “hand-off” report that describes to another engineer: (1) current status of the final project (what works and what does not); (2) known problems preventing the project from working; (3) what you think led to the problems (schedule, faulty equipment, weak design, etc.); and (4) what you would do as the next step.
+Conclusion – Explain what your learned from this final project and what changes you would recommend in future years to this final project or the lectures leading up to this final project.
 
-**Note that the prelab is worth 15pts on this lab - allocate your efforts accordingly!**
+Final Presentation Grade Sheet
+Presenter: ______________________________
 
-Consider your hardware (timer subsystems, chip pinout, etc.) and how you will use it to achieve robot control.  Which pins will output which signals you need?  Which side of the motor will you attach these signals to?  How will you use these signals to achieve forward / back / left / right movement?  **Spend some time here, as these decisions will dictate much of how difficult this lab is for you.**
+Evaluator: ______________________________
 
-Consider how you will setup the PWM subsytem to achieve this control.  What are the registers you'll need to use?  Which bits in those registers are important?  What's the initialization sequence you'll need?
+Category
+Unsat (D/F)
+Subpar (C)
+Average (B)
+Outstanding (A)
+Description of the “big picture” behind the project
 
-Consider what additional hardware you'll need (regulator, motor driver chip, decoupling capacitor, etc.) and how you'll configure / connect it.
 
-Consider the interface you'll want to create to your motors.  Do you want to move each motor invidiually (`moveLeftMotorForward()`)?  Or do you want to move them together (`moveRobotForward()`)?
 
-## Notes
 
-### Motor Control Suggestions
+Purpose of the project (requirements)
 
-There are many ways to control your robot motors using the resources on the MSP430.  I'm leaving this purposesly open-ended to see the creative approaches you come up with.  Here are a few ideas to get your started:
 
-- Output four independent PWM signals - two for each motor
-  - Use RESET mode on the signals you want to ground
-  - Use RESET/SET mode or TOGGLE mode on the signals you want to be PWM
-    - NOTE: CCR0 cannot use RESET/SET mode because it dictates the Timer_A period
-- Output three independent PWM signals - two for forward on each motor, one common for reverse
-  - Forward signals would be independent - reverse would be the same
-  - Limitation: you wouldn't be able to turn tank-style
-- Use internal PWM to trigger interrupts, in which you use GPIO to create motor signals
-  - In this approach, you'd only need two PWM signals
-  - You could use global variables to control direction
-  - You wouldn't have to worry about multiplexing and pin limitations on our packaging.
 
-Or invent your own!
 
-### Using the MSP430 and Launchpad with the Robot
+Presenting the appropriate level of details
 
-[See the writeup available in the datasheets section of the site.](/datasheets/robot.html)
 
-### Motor Driver Chip
 
-The robot motors require ~12V and a high amount of current – both of which would immediately burn out your microcontroller if it were directly connected to the motors.  The motor driver chip (SN754410) takes a 5V input and produces a ~12V output.  Each chip has up to four channels of 5V inputs (1A, 2A, 3A, and 4A) and four corresponding 12V outputs (1Y, 2Y, 3Y, and 4Y).
 
-Measure voltage across the 12V rail to determine what is actually being supplied by your battery.
+Smooth transition between subjects
 
-**The motor driver chip can only supply 1A per circuit!  Do not exceed that!**
 
-You can test your 12V PWM motor driver chip output by connecting it to the oscilloscope.  Do not use the logic analyzer for the 12V PWM signals!
 
-### Motor Stall Current
 
-To ensure you never exceed 1A drawn from your motor driver chip, you have to determine the worst-case current draw from your motors.  This is called the **motor stall current** and usually occurs when your robot is pushing against an object it can't move (i.e. a wall) or switching directions quickly.
+Logical presentation (clarity)
 
-To measure motor stall current, connect your robot to a power supply in series with an ammeter.  Allow the wheel to run freely and apply a voltage you expect to use.  Then, stop the wheel with your hand and monitor the current.  This is your worst-case expected current draw at that voltage.  If it exceeds 1A, you can't run your motor at that voltage or risk burning your motor driver chip on motor stall.  Reduce the voltage until the stall current is below 1A to see a safe voltage you can drive your motor at.
 
-On my robot, the stall current does not go below one amp until my motor is being driven at 8V or less - roughly 60% duty cycle.  Exceed this at your own risk!
 
-### Decoupling Capacitors
 
-The robot motors have the potential to create voltage fluctuations due to sudden spikes in current draw.  They can also induce noise on the 5V line.  This can cause your microcontroller to reset.  To mitigate these fluctuations and noise, you'll need to use some capacitors:
+Conclusion
 
-- One large capacitor (~100uF) across the 12V rail
-  - To supplement current when motor draw spikes
-- One smaller capacitor (~0.1uF) across the 5V rail
-  - To smooth high frequency noise
-- One small capactior (10pF) between the RST pin and ground
-  - To smooth noise to the RST pin
-  - The RST pin is **extremely** sensitive to voltage fluctuations
-  - If voltage drops, even briefly, it will reset your MCU
 
-### How to Drive Your Motors
 
-- You never want to send voltage to both motor terminals simultaneously.  This will create a short in your motor driver chip and cause it to burn out.
-- Avoid sudden direction changes - these cause spikes in current draw by the motors.
-  - I often make both motor terminals low for ~10k clock cycles before switching direction.
 
-### Breaking Parts
+Eye Contact
 
-You'll probably break parts on this lab - you'll know by the burning smell!
 
-This will sometimes result in a short, causing you to burn out one of the fuses on the battery management board that protect the batteries.  When the light on the battery goes from green to yellow, that means there's something is wrong. Either the battery is dead or you've burned a fuse.
 
-To test whether a fuse is burned, use the ohmmeter - a working fuse should have very little resistance. You should turn off the power before you do this!  You can also use a voltmeter - there shouldn't be much voltage drop across a working fuse.  If you have burned a fuse, don't just replace it and try again - try to figure out what caused the fuse to burn in the first place! If you burned your motor driver chip, replace that - but also figure out why you burned it!  If you don't fix the root cause, you'll just break more parts and cost yourself more time / frustration.
 
-## Grading
+Gestures
 
-| Item | Grade | Points | Out of | Date | Due |
-|:-: | :-: | :-: | :-: | :-: |
-| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 15 | | BOC L33 |
-| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 35 | | COB L35 |
-| B Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L35 |
-| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L35 |
-| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L36 |
-| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L36 |
-| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L36 |
-| **Total** | | | **100** | | |
+
+
+
+Visual Aid
+
+
+
+
+Handling of Questions
+
+
+
+
+Difficulty of Project
+
+
+
+
+Recommended Overall Project Grade
+
+
+
+
+Comments:
