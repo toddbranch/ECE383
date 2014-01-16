@@ -23,8 +23,8 @@ begin
 end process;
 ```
 
-- [5.3] Add an enable signal, en, to the 2-to-4 decoder discussed in Section 5.4.1.  When en is '1', the decoder functions as usual.  When en is '0', the decoder is disabled and the output becomes "0000".  Use an if statement to derive this circuit.
-- [5.4] Add an enable signal, en, to the 2-to-4 decoder discussed in Section 5.4.1.  When en is '1', the decoder functions as usual.  When en is '0', the decoder is disabled and the output becomes "0000".  Use a case statement to derive the circuit.
+- [5.3] Add an enable signal, en, to the 2-to-4 decoder discussed in Section 5.4.1.  When en is '1', the decoder functions as usual.  When en is '0', the decoder is disabled and the output becomes "0000".  Use an **if** statement to derive this circuit.
+- [5.4] Add an enable signal, en, to the 2-to-4 decoder discussed in Section 5.4.1.  When en is '1', the decoder functions as usual.  When en is '0', the decoder is disabled and the output becomes "0000".  Use a **case** statement to derive the circuit.
 - [5.10] Assume that `op` is a 2-bit signal with `std_logic_vector` data type.  Consider the following code segment:
   1. Draw the conceptual diagram.
   2. Rewrite the code using concurrent conditional and selected signal assignment statements.
