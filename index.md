@@ -26,18 +26,18 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | L18 | [Lab 3 - Font Controller](/labs/lab3) | | |
 | L19 | [Lab 3 - Font Controller](/labs/lab3) | | |
 | L20 | GR #1 | | |
-| L21 | [PicoBlaze and HW/SW Partitioning](http://slides.ECE383.com/ECE383_slides/L21) | [L21 Assignment](/notes/L21/L21_HW.docx) | |
-| L22 | [FPGA Design for Area, Power, or Speed](http://slides.ECE383.com/ECE383_slides/L22) | [L22 Assignment](/notes/L22/L22_HW.docx) | [L21 Assignment](/notes/L21/L21_HW.docx) |
-| L23 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [L22 Assignment](/notes/L22/L22_HW.docx) |
+| L21 | [PicoBlaze and HW/SW Partitioning](http://slides.ECE383.com/ECE383_slides/L21) | [L21 Assignment](/notes/L21/L21_HW.html) | |
+| L22 | [FPGA Design for Area, Power, or Speed](http://slides.ECE383.com/ECE383_slides/L22) | [L22 Assignment](/notes/L22/L22_HW.html) | [L21 Assignment](/notes/L21/L21_HW.html) |
+| L23 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [L22 Assignment](/notes/L22/L22_HW.html) |
 | L24 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | |
 | L25 | MicroBlaze Introduction | | |
 | L26 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
 | L27 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
 | L28 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
-| L29 | [Register Transfer Methodology](http://slides.ECE383.com/ECE383_slides/L29)| [L29 Assignment](/notes/L29/L29_HW.docx) | |
-| L30 | [Timing Analysis](http://slides.ECE383.com/ECE383_slides/L30) | [L30 Assignment](/notes/L30/L30_HW.docx) | [L29 Assignment](/notes/L29/L29_HW.docx) |
-| L31 | [Clock and Synchronization](http://slides.ECE383.com/ECE383_slides/L31) | [L31 Assignment](/notes/L31/L31_HW.docx) | [L30 Assignment](/notes/L30/L30_HW.docx) |
-| L32 | GR #2 | | [L31 Assignment](/notes/L31/L31_HW.docx) |
+| L29 | [Register Transfer Methodology](http://slides.ECE383.com/ECE383_slides/L29)| [L29 Assignment](/notes/L29/L29_HW.html) | |
+| L30 | [Timing Analysis](http://slides.ECE383.com/ECE383_slides/L30) | [L30 Assignment](/notes/L30/L30_HW.html) | [L29 Assignment](/notes/L29/L29_HW.html) |
+| L31 | [Clock and Synchronization](http://slides.ECE383.com/ECE383_slides/L31) | [L31 Assignment](/notes/L31/L31_HW.html) | [L30 Assignment](/notes/L30/L30_HW.html) |
+| L32 | GR #2 | | [L31 Assignment](/notes/L31/L31_HW.html) |
 | L33 | [Lab 5 - Final Project](/labs/lab5) | | |
 | L34 | [Lab 5 - Final Project](/labs/lab5) | | |
 | L35 | [Lab 5 - Final Project](/labs/lab5) | | |
