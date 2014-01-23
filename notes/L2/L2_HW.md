@@ -2,10 +2,10 @@
 
 1. [2.1] What are the syntax and semantics of a programming language?
 2. [2.2] List three major differences between an HDL and a traditional programming language, such as C.
-3. [2.3] In a traditional language, such as C, we can write the statement a = !a, and in VHDL, we can write a concurrent statement as a `<= not a after 10 ns;`.
-  a. Draw the circuit diagram for the VHDL statement.
-  b. Describe the operation of the circuit in part (a).
-  c. Discuss the differences between the VHDL and C statements.
+3. [2.3] In a traditional language, such as C, we can write the statement `a = !a`, and in VHDL, we can write a concurrent statement as `a <= not a after 10 ns;`.
+  1. Draw the circuit diagram for the VHDL statement.
+  2. Describe the operation of the circuit in part (a).
+  3. Discuss the differences between the VHDL and C statements.
 4. [2.5] For the VHDL code shown below, treat each concurrent statement as a circuit part and draw the conceptual block diagram accordingly.
 ```vhdl
   y <= e1 and e0;
