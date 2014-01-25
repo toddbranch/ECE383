@@ -40,8 +40,8 @@ Generating DVID and HDMI signals is beyond the scope of this lab, but the follow
 
 On the first day of the lab, turn in a typed hard copy the following items:
 
-1. Draw state-transition diagram for the `h_sync_gen` module which implements the timing diagram shown in  .  Just consider count to be an input to your FSM.
-2. Draw the conceptual diagram for `count_reg` and `count_next` signals based on "inputs" `state_reg` and `state_next`.
+1. Draw state-transition diagram for the `h_sync_gen` module which implements the timing diagram shown in Figure 1.  Just consider `count` to be an input to your FSM.
+2. Draw the conceptual diagram for `count_reg` and `count_next` signals based on inputs `state_reg` and `state_next`.
 3. What is the Boolean expression for the completed signal?  Note that this signal is high for exactly one clock cycle - the last clock cycle in the back porch state.
 
 ## VGA Hardware Implementation
@@ -146,7 +146,9 @@ entity pixel_gen is
 	port ( row      : in unsigned(10 downto 0);
 	       column   : in unsigned(10 downto 0);
 	       blank    : in std_logic;
-	       rgb      : out std_logic_vector(7 downto 0));
+	       r        : out std_logic_vector(7 downto 0);
+	       g        : out std_logic_vector(7 downto 0);
+	       b        : out std_logic_vector(7 downto 0));
 end pixel_gen;
 
 entity atlys_lab_video is
@@ -183,7 +185,7 @@ begin
                 clkfx => pixel_clk
             );
 
-    -- Clock diveider - creates HDMI serial output clock
+    -- Clock divider - creates HDMI serial output clock
     inst_DCM_serialize: DCM
     generic map(
                    CLKFX_MULTIPLY => 10, -- 5x speed of pixel clock
@@ -252,7 +254,7 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 ```
 **Code Listing 3** -  Required UCF Contents
 
-Video Synchronization Cut Sheet
-Name: _________________  Instructor: ________________  Section: ________
-Number of hours spent on this lab: _________________ (no points associated with this unless you leave it blank)
-Suggestions to improve this lab in future years: (use blank space below)
+**Third-Party code you'll need:**
+
+- [DVID Module](dvid.vhd)
+- [TDMS_encoder Module](TDMS_encoder.vhd)
