@@ -28,14 +28,6 @@ The `v_sync` signal looks nearly identical to the `h_sync` signal, however it is
 
 More details on the VGA protocol can be found at http://www-mtl.mit.edu/Courses/6.111/labkit/vga.shtml.  This link provides the exact numbers needed to generate the correct timing pulse signals for any VGA resolution.
 
-## HDMI Overview
-
-Generating DVID and HDMI signals is beyond the scope of this lab, but the following are excellent resources to learn the basics of these protocols:
-
-1. Xilinx XAPP460 - Video Connectivity Using TMDS I/O in Spartan-3A FPGAs
-2. Xilinx XAPP495 - Implementing a TMDS Video Interface in the Spartan-6 FPGA
-3. Digital Visual Interface (DVI) Specification - Revision 1.0, 02 April 1999 - See pages 28 and 29 for TMDS encoding algorithm
-
 ## Prelab Assignment
 
 On the first day of the lab, turn in a typed hard copy the following items:
@@ -72,6 +64,18 @@ There are three code listings at the end of this document that will help you in 
 - Code Listing 2 - Template for your top-level design.  This is provided to you to show how the DVI/HDMI modules are connected to your VGA module.
 - Code Listing 3 - The constraints file that connects your top-level design ports to the required pins on the FPGA.
 
+![Figure 3](figure3.jpg)
+
+**Figure 3**: Your `pixel_gen` signal must create a test pattern similar to the one shown in the figure.  This test pattern will aid in testing the quality of your synchronization signals.
+
+## A Functionality
+
+- (10 pts) Change the test pattern or screen resolution in real-time based on switch configuration.  Based on switches on the Atlys board, allow the user to choose between four different test patterns.
+
+## Bonus
+
+- (5 pts) Creating a moving "AF" logo on the screen.
+
 ## Programming the Atlys
 
 Relevant Settings:
@@ -87,36 +91,26 @@ ISE will generate your bit file - you'll use Digilent's Adept software to progra
 - Use generics to define the size of active video, sync pulses, etc.  This will be critical since you may need change the screen resolution in future labs.
 - Use a package header to define global constants (e.g, size of active_video, sync_pulse; the states common to both FSMs, etc.)
 - Use a look-ahead output buffer for your FSMs to prevent glitches
-- Refer to your FPGA board’s reference manual for the pins needed for the video signals and global clock.
 - **Watch out for inferred latches!** In the past, all hardware problems in this lab were caused by cadets ignoring this advice.
 - If your simulation is acting "weird", i.e. signals are not changing when they should, be sure you have all the appropriate signals in the sensitivity list.
 - Only write out RGB values when `blank` is low.  Otherwise you should put out "00000000" (black).  Failure to do this will prevent the monitor from correctly synchronizing with your signal.
 
-## Extra Credit
+## HDMI Overview
 
-Add additional features to this lab for extra credit.  Here are a few ideas, but you can come up with your own as well:
-Change the test pattern or screen resolution in real-time based on switch configuration
-Creating a moving “AF” logo on the screen.
+Generating DVID and HDMI signals is beyond the scope of this lab, but the following are excellent resources to learn the basics of these protocols:
 
-## Laboratory Documentation
+1. Xilinx XAPP460 - Video Connectivity Using TMDS I/O in Spartan-3A FPGAs
+2. Xilinx XAPP495 - Implementing a TMDS Video Interface in the Spartan-6 FPGA
+3. Digital Visual Interface (DVI) Specification - Revision 1.0, 02 April 1999 - See pages 28 and 29 for TMDS encoding algorithm
 
-Your laboratory report must include the following:
+## README Requirements
+
+Your README must include the following:
 
 - **Introduction** - Provide a brief overview of the problem.
-- **Implementation** - Provide block-diagram of your solution and briefly describe how you implemented each the modules.  Include your state-transition diagram.  Commented VHDL code should be included in an appendix.
+- **Implementation** - Provide block-diagram of your solution and briefly describe how you implemented each the modules.  Include your state-transition diagram.  Commented VHDL code should be included.
 - **Test/Debug** - Briefly describe the methods used to verify system functionality.  List the major problems you encountered and how you fixed them.  This should cover all the problems you encountered in the lab and how you fixed them.  It is highly encouraged that you present this section in bullet-format.  At a minimum, break each problem and solution into separate paragraphs.
 - **Conclusion** - Explain what your learned from this lab and what changes you would recommend in future years to this lab or the lectures leading up to this lab.
-
-Additional report requirements:
-
-- Use a mono-spaced font (e.g., Courier New, Consolas) for VHDL items (entity, signals, etc.).
-- Avoid first-person pronouns
-- Proofread your report for formatting and grammar.
-- Ensure your code is well formatted.  Code should be printed with syntax highlighting, correct indentation, comments, and no code lines should be wrapped on the next line.
-
-![Figure 3](figure3.jpg)
-
-**Figure 3**: Your `pixel_gen` signal must create a test pattern similar to the one shown in the figure.  This test pattern will aid in testing the quality of your synchronization signals.
 
 ```vhdl
 entity h_sync_gen is
@@ -275,9 +269,10 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 | Item | Grade | Points | Out of | Date | Due |
 |:-: | :-: | :-: | :-: | :-: |
 | Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L9 |
-| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 50 | | COB L30 |
-| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L30 |
-| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
-| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
-| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
+| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 50 | | COB L11 |
+| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L11 |
+| Bonus Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L11 |
+| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L12 |
+| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L12 |
+| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 20 | | COB L12 |
 | **Total** | | | **100** | | |
