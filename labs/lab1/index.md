@@ -72,6 +72,16 @@ There are three code listings at the end of this document that will help you in 
 - Code Listing 2 - Template for your top-level design.  This is provided to you to show how the DVI/HDMI modules are connected to your VGA module.
 - Code Listing 3 - The constraints file that connects your top-level design ports to the required pins on the FPGA.
 
+## Programming the Atlys
+
+Relevant Settings:
+
+- Family: Spartan6
+- Device: XC6SLX45
+- Speed: -3
+
+ISE will generate your bit file - you'll use Digilent's Adept software to program the board itself.
+
 ## Lab Hints
 
 - Use generics to define the size of active video, sync pulses, etc.  This will be critical since you may need change the screen resolution in future labs.
@@ -258,3 +268,16 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 
 - [DVID Module](dvid.vhd)
 - [TDMS_encoder Module](TDMS_encoder.vhd)
+
+
+## Grading
+
+| Item | Grade | Points | Out of | Date | Due |
+|:-: | :-: | :-: | :-: | :-: |
+| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L9 |
+| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 50 | | COB L30 |
+| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L30 |
+| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
+| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
+| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L31 |
+| **Total** | | | **100** | | |
