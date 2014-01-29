@@ -45,7 +45,7 @@ To successfully complete this lab, you will need to implement the modules shown 
 - `h_sync_gen` and `v_sync_gen` modules
   - Generate the needed VGA synchronization signals: rgb pixel color vector, `h_sync`, and `v_sync`
   - Create simple `blank` signals to indicate when each module is not in the active video state.
-  - Create row and column unsigned numbers to let the pixel generator know which pixel to write to the screen
+  - Create row and column unsigned numbers to let the pixel generator know which pixel to write to the screen.  These should correspond to `count_reg` when in `active_video`, otherwise they should output 0.
   - Create a one-clock-cycle pulse, completed, during the last clock cycle of the back porch state.
   - _Hint_: The `h_completed` signal is used to increment the count in the `v_sync_gen` module.  You will use the `v_completed` signal in the next laboratory assignment.
 - `vga_sync` module
