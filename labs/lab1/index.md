@@ -1,5 +1,7 @@
 # Lab 1 - Video Synchronization
 
+[Teaching Notes](notes.html)
+
 ## Lab Overview
 
 In this lab, you will write a VGA controller in VHDL and implement it on your FPGA development board.  You will be provided a VGA-to-HDMI module that will automatically format your output for the HDMI output port on your development board.  Your video controller will be written using a modified version of the major-minor FSM methodology learned in the lecture. 
@@ -33,7 +35,7 @@ More details on the VGA protocol can be found at http://www-mtl.mit.edu/Courses/
 On the first day of the lab, turn in a typed hard copy the following items:
 
 1. Draw state-transition diagram for the `h_sync_gen` module which implements the timing diagram shown in Figure 1.  Just consider `count` to be an input to your FSM.
-2. Draw the conceptual diagram for `count_reg` and `count_next` signals based on inputs `state_reg` and `state_next`.
+2. Sometimes you'll have to reset the count (state transition?).  Draw the conceptual diagram for `count_reg` and `count_next` signals based on inputs `state_reg` and `state_next`.
 3. What is the Boolean expression for the completed signal?  Note that this signal is high for exactly one clock cycle - the last clock cycle in the back porch state.
 
 ## VGA Hardware Implementation
