@@ -10,7 +10,7 @@ The final video game implementation must have the features listed below.  A samp
 
 1. Background image of the "AF" logo
 2. User-controllable paddle position on the left side of the screen
-3. “Ball” that moves smoothly across the screen
+3. "Ball" that moves smoothly across the screen
   1. Bounces when it hits the top, right, or bottom walls.
   2. The ball is hidden when it is moving across the logo letters.
   3. When the game is over (i.e., the ball hits the left wall), the ball freezes in position.
@@ -43,22 +43,26 @@ Using a more modular hardware design would simplify the addition of game logic -
 
 ## Lab Hints
 
-- Use a package header to define global constants (e.g, size of paddle_width, ball_radius; the states common to both FSMs, etc.)
+- Use a package header to define global constants (e.g, size of `paddle_width`, `ball_radius`; the states common to both FSMs, etc.)
 - When checking the boundary conditions within a state, use only one if statement with elsif/else clauses.  Using multiple if statements in parallel can have unintended consequences.  Even better, you can do all your bounds checking with combinational statements.  This is less likely to have unintended consequences.
 - Make sure you don't infer any latches in your design!  In the past, this was the cause of most hardware implement issues.
 
-## Extra Credit
-Add additional features to this lab for extra credit.  Here are a few ideas, but you can come up with your own as well:
+## B Functionality
 
-- Change the speed of the ball in real-time based on the switch configuration.
-- Creating different “hot” zones on the paddle.  This would result in the ball bouncing off the paddle at different angles based on where it hits.
+Change the speed of the ball in real-time based on the switch configuration.  Use a single switch - there should be two possible ball speeds.
+
+## A Functionality
+
+Create different "hot" zones on the paddle.  This would result in the ball bouncing off the paddle at different angles based on where it hits.
+
+## Free Code
 
 ```vhdl
 entity pong_pixel_gen is
 	port ( row      : in unsigned(10 downto 0);
 	       column   : in unsigned(10 downto 0);
 	       blank    : in std_logic;
-       ball_x   : in unsigned(10 downto 0);
+         ball_x   : in unsigned(10 downto 0);
 	       ball_y   : in unsigned(10 downto 0);
 	       paddle_y : in unsigned(10 downto 0);
 	       rgb      : out std_logic_vector(7 downto 0)
@@ -91,8 +95,15 @@ end atlys_lab_video;
 
 **Code Listing 1** - Entity templates for the lab to ensure consistency between student designs.
 
-Pong Cut Sheet
-Name: _________________  Instructor: ________________  Section: ________
-Number of hours spent on this lab: _________________ (no points associated with this unless you leave it blank)
-Suggestions to improve this lab in future years: (use blank space below)
+## Grading
 
+| Item | Grade | Points | Out of | Date | Due |
+|:-: | :-: | :-: | :-: | :-: |
+| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L13 |
+| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 40 | | COB L15 |
+| B Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L15 |
+| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L15 |
+| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L16 |
+| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L16 |
+| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 20 | | COB L16 |
+| **Total** | | | **100** | | |
