@@ -17,7 +17,7 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | L9 | [Lab 1 - VGA Synchronization](/labs/lab1) | | [L8 Assignment](/notes/L8/L8_HW.html), [Lab 1](/labs/lab1) Prelab |
 | L10 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
 | L11 | [Lab 1 - VGA Synchronization](/labs/lab1) | | [Lab 1](/labs/lab1) Functionality |
-| L12 | VGA Review, Pong Introduction | | [Lab 1](/labs/lab1) Writeup |
+| [L12](/notes/L12/index.html) | VGA Review, Pong Introduction | | [Lab 1](/labs/lab1) Writeup |
 | L13 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Prelab |
 | L14 | [Lab 2 - Pong](/labs/lab2) | | |
 | L15 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Functionality |
