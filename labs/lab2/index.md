@@ -46,6 +46,7 @@ Using a more modular hardware design would simplify the addition of game logic -
 - Use a package header to define global constants (e.g, size of `paddle_width`, `ball_radius`; the states common to both FSMs, etc.)
 - When checking the boundary conditions within a state, use only one if statement with elsif/else clauses.  Using multiple if statements in parallel can have unintended consequences.  Even better, you can do all your bounds checking with combinational statements.  This is less likely to have unintended consequences.
 - Make sure you don't infer any latches in your design!  In the past, this was the cause of most hardware implement issues.
+- Unsure what the hex code for AF blue is?  http://www.rapidtables.com/web/color/RGB_Color.htm
 
 ## B Functionality
 
