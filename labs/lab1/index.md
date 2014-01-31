@@ -54,7 +54,7 @@ To successfully complete this lab, you will need to implement the modules shown 
 - `pixel_gen` module
   - Display a test pattern (see Figure 3) on the screen to aid you in testing the quality of your synchronization signals.
   - If any of the horizontal or vertical dividing lines are blurry or moving, you know that your signals are slightly out of sync.
-- ece484_lab_video_tld is an example top-level module that the instructor used to implement this lab assignment
+  - Only write out RGB values when `blank` is low.  Otherwise you should put out "00000000" (black).  Failure to do this will prevent the monitor from correctly synchronizing with your signal.
 
 The `h_sync_gen` completed signal will pulse high on the last clock cycle of the `h_sync` signal to allow the `v_sync_gen` to count the number of lines completed.
 
@@ -96,7 +96,6 @@ ISE will generate your bit file - you'll use Digilent's Adept software to progra
 - Use a look-ahead output buffer for your FSMs to prevent glitches
 - **Watch out for inferred latches!** In the past, all hardware problems in this lab were caused by cadets ignoring this advice.
 - If your simulation is acting "weird", i.e. signals are not changing when they should, be sure you have all the appropriate signals in the sensitivity list.
-- Only write out RGB values when `blank` is low.  Otherwise you should put out "00000000" (black).  Failure to do this will prevent the monitor from correctly synchronizing with your signal.
 
 ## HDMI Overview
 
@@ -116,6 +115,8 @@ Your README must include the following:
 - **Conclusion** - Explain what your learned from this lab and what changes you would recommend in future years to this lab or the lectures leading up to this lab.
 
 ## Free Code
+
+### Entity Declarations
 
 ```vhdl
 entity h_sync_gen is
@@ -169,8 +170,7 @@ entity atlys_lab_video is
 end atlys_lab_video;
 ```
 
-**Code Listing 1** - Entity templates for the lab to ensure consistency between student designs.
-
+### `atlys_lab_video` Architecture Skeleton
 ```vhdl
 -- TODO: Include requied libraries and packages
 --       Don't forget about `unisim` and its `vcomponents` package.
@@ -241,8 +241,8 @@ begin
 
 end your_last_name;
 ```
-**Code Listing 2** - Template for your top-level design.  You must place the correct code to replace the "TODO" comments.
 
+### Implementation Constraints File
 
 ```
 VCCAUX = 3.3;
@@ -260,9 +260,8 @@ NET "TMDSB(2)"  LOC = "A8" | IOSTANDARD = TMDS_33 ;
 NET "TMDS(3)"  	LOC = "B6" | IOSTANDARD = TMDS_33 ; # Clock
 NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 ```
-**Code Listing 3** -  Required UCF Contents
 
-**Third-Party code you'll need:**
+### Third-Party code you'll need
 
 - [DVID Module](dvid.vhd)
 - [TDMS_encoder Module](TDMS_encoder.vhd)
