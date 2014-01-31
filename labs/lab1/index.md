@@ -84,6 +84,7 @@ Relevant Settings:
 
 - Family: Spartan6
 - Device: XC6SLX45
+- Package: CSG324
 - Speed: -3
 
 ISE will generate your bit file - you'll use Digilent's Adept software to program the board itself.
