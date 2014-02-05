@@ -2,6 +2,10 @@ title = 'VGA Lab Review, Pong Lab Introduction'
 
 # Lesson 8 Notes
 
+## Reading
+
+- [Why are inferred latches bad?](http://electronics.stackexchange.com/questions/38645/why-are-inferred-latches-bad)
+
 ## Assignments
 
 - Lab 2 Prelab
