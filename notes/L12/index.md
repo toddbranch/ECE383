@@ -16,7 +16,19 @@ title = 'VGA Lab Review, Pong Lab Introduction'
 - Introduce Pong Lab
 - Work Time
 
+## Admin
+
+- Those of you who haven't demo'd, demo!  You're falling behind and it's hard to catch up in this course
+- Today will be an easy day - a breather before the start of the next lab
+  - We'll review the VGA lab
+    - I'll drop some lessons learned
+    - I'll give you some ways to clean up your code for future use
+  - I'll intro the next lab (pong)
+  - I'll give you the rest of the time to work!
+
 ## Review VGA Lab
+
+I thought this lab was challenging and asked a lot of you right out of the gate.  But I'm really proud of those of you that put in the time and persevered.  I think it forced people to really rethink their code style, to learn how to use debugging tools, how to read VHDL code, the importance of constraints files, to be cognizant of timing, etc.  Plus, it was the first time you had to develop your own code to deal with challenging time constraints.
 
 ### Lessons Learned
 
