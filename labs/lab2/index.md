@@ -45,7 +45,7 @@ Using a more modular hardware design would simplify the addition of game logic -
 
 - Use a package header to define global constants (e.g, size of `paddle_width`, `ball_radius`; the states common to both FSMs, etc.)
 - When checking the boundary conditions within a state, use only one if statement with elsif/else clauses.  Using multiple if statements in parallel can have unintended consequences.  Even better, you can do all your bounds checking with combinational statements.  This is less likely to have unintended consequences.
-- Make sure you don't infer any latches in your design!  In the past, this was the cause of most hardware implement issues.
+- Make sure you don't infer any latches in your design!  In the past, this was the cause of most hardware implementation issues.
 - Unsure what the hex code for AF blue is?  http://www.rapidtables.com/web/color/RGB_Color.htm
 
 ## B Functionality
@@ -60,37 +60,39 @@ Create different "hot" zones on the paddle.  This would result in the ball bounc
 
 ```vhdl
 entity pong_pixel_gen is
-	port ( row      : in unsigned(10 downto 0);
-	       column   : in unsigned(10 downto 0);
-	       blank    : in std_logic;
-         ball_x   : in unsigned(10 downto 0);
-	       ball_y   : in unsigned(10 downto 0);
-	       paddle_y : in unsigned(10 downto 0);
-	       rgb      : out std_logic_vector(7 downto 0)
-     );
+  port (
+          row      : in unsigned(10 downto 0);
+          column   : in unsigned(10 downto 0);
+          blank    : in std_logic;
+          ball_x   : in unsigned(10 downto 0);
+          ball_y   : in unsigned(10 downto 0);
+          paddle_y : in unsigned(10 downto 0);
+          rgb      : out std_logic_vector(7 downto 0)
+  );
 end pong_pixel_gen;
 
 entity pong_control is
-	port ( clk         : in std_logic;
-	       reset       : in std_logic;
-	       up          : in std_logic;
-	       down        : in std_logic;
-	       v_completed : in std_logic;
-	       ball_x      : out unsigned(10 downto 0);
-	       ball_y      : out unsigned(10 downto 0);
-	       paddle_y    : out unsigned(10 downto 0)
-     );
+  port (
+          clk         : in std_logic;
+          reset       : in std_logic;
+          up          : in std_logic;
+          down        : in std_logic;
+          v_completed : in std_logic;
+          ball_x      : out unsigned(10 downto 0);
+          ball_y      : out unsigned(10 downto 0);
+          paddle_y    : out unsigned(10 downto 0)
+  );
 end pong_control;
 
 entity atlys_lab_video is
-    port ( 
-             clk   : in  std_logic; -- 100 MHz
-             reset : in  std_logic;
-             up    : in  std_logic;
-             down  : in  std_logic;
-             tmds  : out std_logic_vector(3 downto 0);
-             tmdsb : out std_logic_vector(3 downto 0)
-         );
+  port (
+          clk   : in  std_logic; -- 100 MHz
+          reset : in  std_logic;
+          up    : in  std_logic;
+          down  : in  std_logic;
+          tmds  : out std_logic_vector(3 downto 0);
+          tmdsb : out std_logic_vector(3 downto 0)
+  );
 end atlys_lab_video;
 ```
 
