@@ -4,9 +4,9 @@ title = 'Labs'
 
 - [Lab 1 - Video Synchronization](/labs/lab1)
 - [Lab 2 - Pong](/labs/lab2)
-- [Lab 3 - Font Controller](/labs/font_controller.docx)
-- [Lab 4 - Remote Terminal](/labs/remote_terminal.docx)
-- [Lab 5 - Final Project](/labs/final_project.docx)
+- [Lab 3 - Font Controller](/labs/lab3)
+- [Lab 4 - Remote Terminal](/labs/lab4)
+- [Lab 5 - Final Project](/labs/lab5)
 
 ## Demos
 
