@@ -67,7 +67,7 @@ entity pong_pixel_gen is
           ball_x   : in unsigned(10 downto 0);
           ball_y   : in unsigned(10 downto 0);
           paddle_y : in unsigned(10 downto 0);
-          rgb      : out std_logic_vector(7 downto 0)
+          r,g,b    : out std_logic_vector(7 downto 0)
   );
 end pong_pixel_gen;
 
