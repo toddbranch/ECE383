@@ -1,5 +1,7 @@
 # Lab 2 - Pong
 
+[Teaching Notes](notes.html)
+
 ## Lab Overview
 
 In this lab, you will build upon the modules created in the VGA laboratory assignment to implement a simplified version of the classic Pong video game.  This laboratory assignment is based on a FSM lab from the 6.111 course at MIT.
