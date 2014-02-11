@@ -100,6 +100,16 @@ end atlys_lab_video;
 
 **Code Listing 1** - Entity templates for the lab to ensure consistency between student designs.
 
+## Haven't Achieved Lab 1 Functionality Yet?
+
+Here's a synthesized netlist with my functional `vga_sync` module:
+
+[vga_sync.ngc](vga_sync.ngc)
+
+You can add this file to your project and instantiate it in your `atlys_lab_video` top-level just like any other component.
+
+**Remember, you still must achieve functionality on all labs to pass the course.**
+
 ## Grading
 
 | Item | Grade | Points | Out of | Date | Due |
