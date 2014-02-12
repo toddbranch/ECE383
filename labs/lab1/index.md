@@ -78,7 +78,7 @@ There are three code listings at the end of this document that will help you in 
 
 ## A Functionality
 
-- (5 pts) Create a moving "AF" logo on the screen.
+- (5 pts) Create a moving "AF" logo on the screen.  This will give you a jump-start on Lab 2!
 
 ## Programming the Atlys
 
