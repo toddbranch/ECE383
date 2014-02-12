@@ -31,3 +31,29 @@ A good schedule:
 - Day 1 - task 1-3
 - Day 2 - task 4-5
 - Day 3 - task 6-7, bonus functionality
+
+**If you didn't finish Lab 1, I've given you a synthesized netlist for my `vga_sync`**.  This will allow you to move forward with Lab 2 without handicap.  Remember, you must achieve functionality on all labs to pass the course.
+
+## Documentation Focus Areas
+
+- Use of Git
+  - Detailed commit messages after each substantive change
+  - Bug fixes should have a commit message!
+  - No more "Update README"!  Tell me what you added
+  - Make your commit history clean - no "initial commit" or "merged branch of ..." midstream
+- Code Style
+  - Disciplined!
+  - No inferred latches
+  - Clear separation of memory and combinational logic
+  - Constants / generics over magic numbers
+  - Short, relevant headers
+- README
+  - Introduce the problem you're trying to solve
+    - In Lab 1, tell me about the timing requirements!
+  - Show how your state machine solves it
+  - Show the hardware required to realize the state machine
+  - Show the code constructs that map to hardware
+  - Describe each of your modules and how they fit together
+  - Describe your test / debug strategy
+  - Discuss each bug you ran into, how you identified it, and how you ultimately fixed it
+  - Pictures are good!  Block diagram, FSM diagram, running testbench, lab result, etc.
