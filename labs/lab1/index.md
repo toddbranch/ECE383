@@ -70,11 +70,13 @@ There are three code listings at the end of this document that will help you in 
 
 **Figure 3**: Your `pixel_gen` signal must create a test pattern similar to the one shown in the figure.  This test pattern will aid in testing the quality of your synchronization signals.
 
-## A Functionality
+## B Functionality
 
 - (10 pts) Change the test pattern or screen resolution in real-time based on switch configuration.  Based on switches on the Atlys board, allow the user to choose between four different test patterns.
 
-## Bonus
+**Note:** You'll have to modify the entity declarations of your `atlys_lab_video` top-level and `pixel_gen` to accept switch inputs.  You'll also have to modify your constraints file to map the switches to signals in your `atlys_lab_video` top-level.
+
+## A Functionality
 
 - (5 pts) Create a moving "AF" logo on the screen.
 
@@ -272,9 +274,9 @@ NET "TMDSB(3)"  LOC = "A6" | IOSTANDARD = TMDS_33 ;
 | Item | Grade | Points | Out of | Date | Due |
 |:-: | :-: | :-: | :-: | :-: |
 | Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L9 |
-| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 50 | | COB L11 |
-| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L11 |
-| Bonus Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L11 |
+| Required Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 45 | | COB L11 |
+| B Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L11 |
+| A Functionality | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L11 |
 | Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L12 |
 | Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L12 |
 | README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 20 | | COB L12 |
