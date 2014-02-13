@@ -6,15 +6,16 @@ In the lab, you will develop a simple font controller for the VGA controller you
 
 ## Font Controller Overview
 
-In order to implement the font controller, you will need to create at below three modules.  Example VHDL entity declarations for these modules are provided on the second-to-last page of this document.
+In order to implement the font controller, you will need to create the below three modules.  Example VHDL entity declarations for these modules are provided in the Free Code section.
 
-1. Font ROM - A "look-up table" that contains the 127 different characters that we are able to display on the screen.  An example 8x16 character is provided in Figure 1.  This module is provided for you on the course website.
-2. Screen Character Buffer - 2400 (80 columns, 30 rows – based on a 640x480 screen resolution) character buffer that stores the character to display at each location on the screen.  The memory structure you will implement is shown in Figure 2.  To implement this module, you infer block RAM as shown in the XST User Guide.  The following definitions are helpful to interpret the terminology on Figure 3, i.e. how to structurally connect the screen buffer to the other signals in the character generator.
+1. **Font ROM** - A "look-up table" that contains the 127 different characters that we are able to display on the screen.  An example 8x16 character is provided in Figure 1.  This module is provided for you on the course website.
+2. **Screen Character Buffer** - 2400 (80 columns, 30 rows - based on a 640x480 screen resolution) character buffer that stores the character to display at each location on the screen.  The memory structure you will implement is shown in Figure 2.  To implement this module, you infer block RAM as shown in the XST User Guide.  The following definitions are helpful to interpret the terminology on Figure 3, i.e. how to structurally connect the screen buffer to the other signals in the character generator.
+
   1. `address_a`, `data_out_a`, `data_in` - used as a write port in the latter part of the lab when we will write new values to incrementing (internal_count) locations based on button presses
   2. `address_b`, `data_out_b` - used to read ASCII character in one of the 80 x 30 total memory locations in the RAM.  This is a continual process which is updated based on the current pixel’s row and column
   3. f(row, column) - a combinational statement that calculates the ASCII character we are returning.  (e.g., row = 8, col = 16, results in 80 returning).  This is very similar to 2D array math, but you I	gnore the lowest 3/4 bits for column/row.
-3. Character Generation Controller - This module takes in the current VGA row/column and outputs one RGB pixel based on whether or not that pixel is part of a font character.  To simplify the logic needed, the fonts are 8x16 pixels.  Most of the structure and logic is given to you in Figure 3.
-4. Top Level Design - Connects `character_gen`, `input_to_pulse`, `vga_sync`, and the DCM together.  You will also need to add registers to delay the VGA signals to account for the pipeline delays within the character generation controller.
+3. **Character Generation Controller** - This module takes in the current VGA row/column and outputs one RGB pixel based on whether or not that pixel is part of a font character.  To simplify the logic needed, the fonts are 8x16 pixels.  Most of the structure and logic is given to you in Figure 3.
+4. **Top Level Design** - Connects `character_gen`, `input_to_pulse`, `vga_sync`, and the DCM together.  You will also need to add registers to delay the VGA signals to account for the pipeline delays within the character generation controller.
 
 ![Figure 1](figure1.jpg)
 
@@ -69,6 +70,8 @@ Add additional features to this lab for extra credit.  Here are a few ideas, but
 ![Figure 3](figure3.jpg)
 
 **Figure 3**: Example internal diagram for the character_gen module.
+
+## Free Code
 
 ```vhdl
 entity input_to_pulse is

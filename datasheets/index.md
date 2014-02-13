@@ -5,6 +5,7 @@ title = 'Datasheets'
 - [Atlys Board Reference Manual](Atlys_rm.pdf)
 - [Atlys Master UCF](AtlysGeneral.ucf)
 - [Spartan 6 Unisim Reference](spartan6_hdl.pdf)
+- [XST User Guide for Virtex-6, Spartan-6, and 7 Series Devices](xst_v6s6.pdf)
 - [PicoBlaze Guide](KCPSM6_User_Guide_30Sept12.pdf)
 
 ## Miscellaneous
