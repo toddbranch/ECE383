@@ -54,7 +54,7 @@ To test your character generation control module in hardware, you should use swi
 
 ![Figure 3](figure3.jpg)
 
-**Figure 3**: Example internal diagram for the character_gen module.
+**Figure 3**: Example internal diagram for the `character_gen` module.
 
 ## Lab Hints
 
