@@ -13,15 +13,15 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | [L5](/notes/L5/index.html) | [Sequential Circuits in VHDL](http://slides.ECE383.com/ECE383_slides/L5) | [L5 Assignment](/notes/L5/L5_HW.html) | [L4 Assignment](/notes/L4/L4_HW.html) |
 | [L6](/notes/L6/index.html) | [Writing VHDL Test Benches](http://slides.ECE383.com/ECE383_slides/L6) | [L6 Assignment](/notes/L6/L6_HW.html) | [L5 Assignment](/notes/L5/L5_HW.html) |
 | [L7](/notes/L7/index.html) | [Hierarchical and Testable Design in VHDL](http://slides.ECE383.com/ECE383_slides/L7)| [L7 Assignment](/notes/L7/L7_HW.html) | [L6 Assignment](/notes/L6/L6_HW.html) |
-| [L8](/notes/L8/index.html) | [Finite State Machines](http://slides.ECE383.com/ECE383_slides/L8) | [L8 Assignment](/notes/L8/L8_HW.html) | [L7 Assignment](/notes/L7/L7_HW.html) |
+| [L8](/notes/L8/index.html) | [Finite State Machines](http://slides.ECE383.com/ECE383_slides/L8) | [L8 Assignment](/notes/L8/L8_HW.html), [Lab 1](/labs/lab1) Prelab | [L7 Assignment](/notes/L7/L7_HW.html) |
 | L9 | [Lab 1 - VGA Synchronization](/labs/lab1) | | [L8 Assignment](/notes/L8/L8_HW.html), [Lab 1](/labs/lab1) Prelab |
 | L10 | [Lab 1 - VGA Synchronization](/labs/lab1) | | |
 | L11 | [Lab 1 - VGA Synchronization](/labs/lab1) | | [Lab 1](/labs/lab1) Functionality |
-| [L12](/notes/L12/index.html) | VGA Review, Pong Introduction | | [Lab 1](/labs/lab1) Writeup |
+| [L12](/notes/L12/index.html) | VGA Review, Pong Introduction | [Lab 2](/labs/lab2) Prelab | [Lab 1](/labs/lab1) Writeup |
 | L13 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Prelab |
 | L14 | [Lab 2 - Pong](/labs/lab2) | | |
 | L15 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Functionality |
-| L16 | Pong Review, Font Controller Introduction | | [Lab 2](/labs/lab2) Writeup |
+| L16 | Pong Review, Font Controller Introduction | [Lab 3](/labs/lab3) Prelab | [Lab 2](/labs/lab2) Writeup |
 | L17 | [Lab 3 - Font Controller](/labs/lab3) | | [Lab 3](/labs/lab3) Prelab |
 | L18 | [Lab 3 - Font Controller](/labs/lab3) | | |
 | L19 | [Lab 3 - Font Controller](/labs/lab3) | | [Lab 3](/labs/lab3) Functionality|
