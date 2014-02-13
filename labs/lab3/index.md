@@ -33,14 +33,14 @@ On the first day of the lab, turn in a typed hard copy the following items [Note
 3. What does `data[7:0]` represent?
 4. In what order should `row[3:0]` and `data_out_b[7:0]` be concatenated?  Why?
 5. What is which `data[7:0]` bit should be returned for each of the following column values:
-  1. column[2:0] = "000"
-  2. column[2:0] = "001"
-  3. column[2:0] = "010"
-  4. column[2:0] = "011"
-  5. column[2:0] = "100"
-  6. column[2:0] = "101"
-  7. column[2:0] = "110"
-  8. column[2:0] = "111"
+  1. `column[2:0]` = "000"
+  2. `column[2:0]` = "001"
+  3. `column[2:0]` = "010"
+  4. `column[2:0]` = "011"
+  5. `column[2:0]` = "100"
+  6. `column[2:0]` = "101"
+  7. `column[2:0]` = "110"
+  8. `column[2:0]` = "111"
 
 Also, you must turn in the VHDL code and simulation results for your completed `input_to_pulse` module, as described in the next section.  Do not underestimate this task!  In the past, many students never were able to get a fully functional `input_to_pulse` module.
 
