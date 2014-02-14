@@ -21,16 +21,16 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | L13 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Prelab |
 | L14 | [Lab 2 - Pong](/labs/lab2) | | |
 | L15 | [Lab 2 - Pong](/labs/lab2) | | [Lab 2](/labs/lab2) Functionality |
-| L16 | Pong Review, Font Controller Introduction | [Lab 3](/labs/lab3) Prelab | [Lab 2](/labs/lab2) Writeup |
+| [L16](/notes/L16) | Pong Review, Font Controller Introduction | [Lab 3](/labs/lab3) Prelab | [Lab 2](/labs/lab2) Writeup |
 | L17 | [Lab 3 - Font Controller](/labs/lab3) | | [Lab 3](/labs/lab3) Prelab |
 | L18 | [Lab 3 - Font Controller](/labs/lab3) | | |
 | L19 | [Lab 3 - Font Controller](/labs/lab3) | | [Lab 3](/labs/lab3) Functionality|
 | L20 | GR #1 | | [Lab 3](/labs/lab3) Writeup |
-| L21 | [PicoBlaze and HW/SW Partitioning](http://slides.ECE383.com/ECE383_slides/L21) | [L21 Assignment](/notes/L21/L21_HW.html) | |
-| L22 | [FPGA Design for Area, Power, or Speed](http://slides.ECE383.com/ECE383_slides/L22) | [L22 Assignment](/notes/L22/L22_HW.html) | [L21 Assignment](/notes/L21/L21_HW.html) |
+| [L21](/notes/L21) | [PicoBlaze and HW/SW Partitioning](http://slides.ECE383.com/ECE383_slides/L21) | [L21 Assignment](/notes/L21/L21_HW.html) | |
+| [L22](/notes/L22) | [FPGA Design for Area, Power, or Speed](http://slides.ECE383.com/ECE383_slides/L22) | [L22 Assignment](/notes/L22/L22_HW.html) | [L21 Assignment](/notes/L21/L21_HW.html) |
 | L23 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [L22 Assignment](/notes/L22/L22_HW.html), [Lab 4a](/labs/lab4) Prelab |
 | L24 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [Lab 4a](/labs/lab4) Functionality |
-| L25 | MicroBlaze Introduction | | |
+| [L25](/notes/L25) | MicroBlaze Introduction | | |
 | L26 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Prelab |
 | L27 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
 | L28 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Functionality |
