@@ -2,11 +2,13 @@ title = 'Labs'
 
 # Labs
 
-- [Lab 1 - Video Synchronization](/labs/lab1)
-- [Lab 2 - Pong](/labs/lab2)
-- [Lab 3 - Font Controller](/labs/lab3)
-- [Lab 4 - Remote Terminal](/labs/lab4)
-- [Lab 5 - Final Project](/labs/lab5)
+- [Lab 1 - Video Synchronization](lab1)
+- [Lab 2 - Pong](lab2)
+- [Lab 3 - Font Controller](lab3)
+- [Lab 4 - Remote Terminal](lab4)
+- Lab 5 - Final Project
+  - [Writeup](lab5)
+  - [Ideas](lab5/ideas.html)
 
 ## Demos
 
