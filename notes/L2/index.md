@@ -7,4 +7,9 @@ title = 'HDL Overview'
 
 ## Assignments
 
+## Instructor Reference
+
+- Start of VHDL "Boot Camp"
+  - These lessons need lots of practice!
+
 ## Lesson Outline
