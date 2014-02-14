@@ -1,6 +1,6 @@
 title = 'VGA Lab Review, Pong Lab Introduction'
 
-# Lesson 8 Notes
+# Lesson 12 Notes
 
 ## Reading
 
