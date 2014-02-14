@@ -1,4 +1,4 @@
-title = 'Register Transfer Methodology
+title = 'Register Transfer Methodology'
 
 # Lesson 29 Notes
 
