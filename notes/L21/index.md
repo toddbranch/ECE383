@@ -1,4 +1,4 @@
-title = 'Picoblaze and HW/SW Partitioning'
+title = 'PicoBlaze and HW/SW Partitioning'
 
 # Lesson 21 Notes
 

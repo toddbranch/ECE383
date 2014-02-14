@@ -1,4 +1,4 @@
-title = 'FPGA Design for Area, Powers, or Speed'
+title = 'FPGA Design for Area, Power, or Speed'
 
 # Lesson 22 Notes
 
