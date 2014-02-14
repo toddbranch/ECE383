@@ -34,9 +34,9 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | L26 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Prelab |
 | L27 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
 | L28 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Functionality |
-| L29 | [Register Transfer Methodology](http://slides.ECE383.com/ECE383_slides/L29)| [L29 Assignment](/notes/L29/L29_HW.html) | Lab 4 Writeup |
-| L30 | [Timing Analysis](http://slides.ECE383.com/ECE383_slides/L30) | [L30 Assignment](/notes/L30/L30_HW.html) | [L29 Assignment](/notes/L29/L29_HW.html) |
-| L31 | [Clock and Synchronization](http://slides.ECE383.com/ECE383_slides/L31) | [L31 Assignment](/notes/L31/L31_HW.html) | [L30 Assignment](/notes/L30/L30_HW.html) |
+| [L29](/notes/L29/index.html) | [Register Transfer Methodology](http://slides.ECE383.com/ECE383_slides/L29)| [L29 Assignment](/notes/L29/L29_HW.html) | Lab 4 Writeup |
+| [L30](/notes/L30/index.html)| [Timing Analysis](http://slides.ECE383.com/ECE383_slides/L30) | [L30 Assignment](/notes/L30/L30_HW.html) | [L29 Assignment](/notes/L29/L29_HW.html) |
+| [L31](/notes/L31/index.html)| [Clock and Synchronization](http://slides.ECE383.com/ECE383_slides/L31) | [L31 Assignment](/notes/L31/L31_HW.html) | [L30 Assignment](/notes/L30/L30_HW.html) |
 | L32 | GR #2 | | [L31 Assignment](/notes/L31/L31_HW.html) |
 | L33 | [Lab 5 - Final Project](/labs/lab5) | | |
 | L34 | [Lab 5 - Final Project](/labs/lab5) | | |
