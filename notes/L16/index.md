@@ -18,26 +18,37 @@ title = 'Pong Review, Font Controller Introduction'
 
 - Today will be an easy day - a breather before the start of the next lab
   - We'll review the Pong lab
-    - I'll drop some lessons learned
-    - I'll give you some ways to clean up your code for future use
   - I'll intro the next lab (font controller)
   - I'll give you the rest of the time to work!
 
 ## Review Pong Lab
 
-### Lessons Learned
+Things I noticed:
+
+- Gigantic state machines
+  - Break it into smaller machines and chain them together!
+- Getting attached to early code
+  - Your first crack at a problem is always going to suck - expect to rewrite it!
+  - Rewriting bad code is much faster than hunting for that one bug that might fix everything
+  - Arriving at a solution with well-written code makes it easier to add features
+- Going for the "Home Run"
+  - Trying to add in too many features before verifying that basic features work
+  - When behavior issues might be due to multiple code issues, this becomes tough to debug!
+- Trying to everything in `process` statements
+  - Use combinational logic where it makes sense!
+- Inferred memory
+  - If you intend a `process` statements to be combinational, every input better be in your sensitivity list!
+  - Set default values for everything being set within your `process`!
 
 So, in capstone, if you're designing an embedded application that needs to implement a pong game on a large display, should you use an MCU or an FPGA?
 
 YOU SHOULD USE AN MCU!
 
-### Ways to Clean Up Lab 2
- 
 ## Introduce Font Controller Lab
 
 [Font Controller Lab](/labs/lab3)
 
-**Discuss methods to infer block RAM.  `input_to_pulse`?**
+**Discuss methods to infer block RAM.  `input_to_pulse`**
 
 ## Work Time
 
