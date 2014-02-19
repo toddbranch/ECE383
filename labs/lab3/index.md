@@ -60,9 +60,19 @@ To test your character generation control module in hardware, you should use swi
 
 ## A Functionality
 
+Interface with an NES controller to take input from the user!
+
+![NES Controller](NES-controller.jpg)
+
+Users pressing the up / down arrows should scroll through available characters.  Users pressing left / right arrows should move cursor location.
+
 ![NES Pinout](nes_pinout.jpg)
 
-![NES Timing](nes_timing.jpg)
+**Figure 4**: NES Controller pinout
+
+![NES Timing](nes_timing.png)
+
+**Figure 5**: NES Controller timing diagram
 
 ## Lab Hints
 
