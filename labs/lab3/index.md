@@ -64,15 +64,17 @@ Interface with an NES controller to take input from the user!
 
 ![NES Controller](NES-controller.jpg)
 
+**Figure 4**: The classic NES controller!
+
 Users pressing the up / down arrows should scroll through available characters.  Users pressing left / right arrows should move cursor location.
 
 ![NES Pinout](nes_pinout.jpg)
 
-**Figure 4**: NES Controller pinout
+**Figure 5**: NES Controller pinout
 
 ![NES Timing](nes_timing.png)
 
-**Figure 5**: NES Controller timing diagram
+**Figure 6**: NES Controller timing diagram
 
 ## Lab Hints
 
