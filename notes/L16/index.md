@@ -37,7 +37,7 @@ Things I noticed:
 - Trying to everything in `process` statements
   - Use combinational logic where it makes sense!
 - Inferred memory
-  - If you intend a `process` statements to be combinational, every input better be in your sensitivity list!
+  - If you intend a `process` statement to be combinational, every input better be in your sensitivity list!
   - Set default values for everything being set within your `process`!
 
 So, in capstone, if you're designing an embedded application that needs to implement a pong game on a large display, should you use an MCU or an FPGA?
