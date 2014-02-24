@@ -70,7 +70,13 @@ Users pressing the up / down arrows should scroll through available characters. 
 
 I've given you code to drive the NES in Code Listing 3.  You'll need to interface this into your code to be successful!  You'll also have to connect the necessary driver signals to the NES through GPIO.  Here's the pinout for the custom connectors Mr. Evans built:
 
-**TODO:** Give pinout for connectors.
+Controller pinout (**silver paint mark on one side is reference**):
+
+1. Vcc (silver mark)
+2. Data
+3. Latch
+4. Clk
+5. Gnd
 
 ## Lab Hints
 
