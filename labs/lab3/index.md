@@ -84,6 +84,10 @@ Controller pinout (**silver paint mark on one side is reference**):
   - The XST user guide also explains how to initialize the memory.
   - Check your synthesis output log to check if the XST synthesizer correctly inferred the RAM.
 - Since the `rgb_pixel` signal is delayed two clock cycles, you will need to pipeline (i.e., add registers) to your other VGA signals in your top-level design.
+  - **WARNING:** If you delay in your top-level, you should delay off of
+    `pixel_clk`, not `clk`!
+  - This error usually manifests in a glitch on the left side of the screen -
+    it looks like you're off by about two pixels
 - Make sure you use the correct IO standard in your constraints file.  All GPIO pins should have the following constraint added: IOSTANDARD = LVCMOS33.
 
 ## Free Code
