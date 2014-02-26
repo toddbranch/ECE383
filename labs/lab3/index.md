@@ -89,6 +89,10 @@ Controller pinout (**silver paint mark on one side is reference**):
   - This error usually manifests in a glitch on the left side of the screen -
     it looks like you're off by about two pixels
 - Make sure you use the correct IO standard in your constraints file.  All GPIO pins should have the following constraint added: IOSTANDARD = LVCMOS33.
+- For A Functionality, you'll have to find some GPIO to use for your Data,
+  Latch, and Clk signals.  I found it easiest to use the JB connector on the
+board.  Look through the master constraints file to see the location for each
+pin.
 
 ## Free Code
 
