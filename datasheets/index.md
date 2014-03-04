@@ -10,6 +10,8 @@ title = 'Datasheets'
 
 ## Miscellaneous
 
+- [NES Controller Driver Walkthrough](nes_driver_walkthrough.html)
+
 ### git / vim / Command Line
 
-[See ECE382 course website.](http://www.ece382.com/datasheets/)
+- [See ECE382 course website.](http://www.ece382.com/datasheets/)
