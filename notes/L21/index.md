@@ -12,3 +12,13 @@ title = 'PicoBlaze and HW/SW Partitioning'
 ## Assignments
 
 ## Lesson Outline
+
+## git Notes
+
+- You don't have to push often.  It's perfectly
+  acceptable to commit many times locally between
+pushes.
+- `git diff <filename>`
+  - Shows changes in file since last commit
+  - Useful in determining what you should put in commit
+    messages
