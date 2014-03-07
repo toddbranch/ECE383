@@ -6,7 +6,13 @@ title = 'Datasheets'
 - [Atlys Master UCF](AtlysGeneral.ucf)
 - [Spartan 6 Unisim Reference](spartan6_hdl.pdf)
 - [XST User Guide for Virtex-6, Spartan-6, and 7 Series Devices](xst_v6s6.pdf)
-- [PicoBlaze Guide](KCPSM6_User_Guide_30Sept12.pdf)
+
+## PicoBlaze
+
+- [PicoBlaze
+  Files](http://www.xilinx.com/ipcenter/processor_central/picoblaze/member/)
+- [OpenPIC
+  IDE](http://www.openpicide.org/content/about/)
 
 ## Miscellaneous
 
