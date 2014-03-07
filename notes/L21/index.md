@@ -34,9 +34,24 @@ pushes.
   - Problem 2 - translating VHDL to hardware
 - Testing
   - Lots of small point losses added up
+- FSM
+  - This was the most important question to me
+  - Most people did great!
+  - If you struggled, we need to fix that!
 
 ## Main Lesson
 
 ## Walk Through Homework
 
 - Give students a break - has been a busy week
+
+## Introduce Final Project
+
+- Rough proposal by next lesson
+  - **Add this to the HW**
+- Final approved project lesson prior to Spring Break
+  - L25?
+  - So Mr. Evans can order parts
+- Example projects / ideas
+  - 
+- Tour of the parts room
