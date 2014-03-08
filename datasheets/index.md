@@ -13,7 +13,7 @@ title = 'Datasheets'
   Files](http://www.xilinx.com/ipcenter/processor_central/picoblaze/member/)
 - [OpenPIC
   IDE](http://www.openpicide.org/content/about/)
-  - [v0.5.6 Download](openPICIDE_v0.5.6_win_setup.exe)
+  - [v0.5.8 Download](openPICIDE_v0.5.8_win_setup.exe)
 
 ## Miscellaneous
 
