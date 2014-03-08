@@ -12,8 +12,8 @@ Your software will read in three digit commands along with optional parameters. 
 
 | Command | Description |
 | :-: | :-: |
-| led ## | Write the hex value "##" to the LEDs |
-| swt | Read in the current switch value and write to the terminal as a two hex values |
+| `led ##` | Write the hex value "##" to the LEDs |
+| `swt` | Read in the current switch value and write to the terminal as a two hex values |
 
 **Table 1**: List of commands that must be implemented in this laboratory assignment.  See Figure 1 for an example terminal session.
 
@@ -26,9 +26,9 @@ Your software will read in three digit commands along with optional parameters. 
 Create a PicoBlaze design that meets the following requirements:
 
 1. Defines the following ports:
-  1. Port 0xAF – Read switch inputs
-  2. Port 0x07 – Read push button inputs
-  3. Port 0x07 – write button values to upper-four LEDs, and lower-four switch values to the lower-four LEDs.
+  1. Port `0xAF` – Read switch inputs
+  2. Port `0x07` – Read push button inputs
+  3. Port `0x07` – write button values to upper-four LEDs, and lower-four switch values to the lower-four LEDs.
 2. Constantly read in the push buttons and lower-four bits of the switches and writes those values out to the LEDs.
 
 Turn in a hard copy of your software and VHDL code along with simulation screenshots to demonstrate your design works correctly.
@@ -37,7 +37,7 @@ You should use the openPICIDE software to write and simulate your assembly code,
 
 - Spartan 6 FPGA
 - Memory Bank Size of 1024 instructions
-- Select the VHDL PicoBlaze ROM template from the course website as your “VHDL Template.”
+- Select the VHDL PicoBlaze ROM template from the course website as your "VHDL Template."
 
 ## PicoBlaze Implementation
 
@@ -47,7 +47,7 @@ You must design your hardware and software implementation for this lab.
 
 With MicroBlaze, recreate the same functionality as in the first part of this lab.  However, you must also add a vga command that allows the user to specify the background color to send to the VGA monitor.
 
-_Note_: Never connect any of your ports to the "GCLK" signal.   Or you will get a PAR error and your design will not work correctly.
+_Note_: Never connect any of your ports to the `GCLK` signal.   Or you will get a PAR error and your design will not work correctly.
 
 ## Lab Hints
 
@@ -122,8 +122,3 @@ end atlys_remote_terminal_pb;
 ```
 
 **Code Listing 1** - Entity templates for the lab to ensure consistency between student designs.
-
-Remote Terminal Cut Sheet
-Name: _________________  Instructor: ________________  Section: ________
-Number of hours spent on this lab: _________________ (no points associated with this unless you leave it blank)
-Suggestions to improve this lab in future years: (use blank space below)
