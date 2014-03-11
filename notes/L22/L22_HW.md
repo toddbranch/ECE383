@@ -1,6 +1,6 @@
 # L22 Homework
 
-**Image**
+![Digital Circuit](digital.jpg)
 
 - Using the provided digital circuit:
   1. Identify the nodes that are affected by `PERIOD` constraints
@@ -12,7 +12,7 @@
   5. If the LUTs create a delay of 5 ns, the Adder delay is 10 ns, and the multiplier delay is 15 ns, what is the maximum overall propagation delay if you use the 50/50 rule?  In other words, what is the maximum clock period between synchronous elements?  Ignore setup and hold times.
 - Draw the necessary additional hardware to pipeline the below 5-bit multiplier.  What other control signal(s) might you add to the multiplier in order to make it useful in a more general application?  What type of hardware would control the control signal(s)?
 
-**Image**
+![Adder](adder.jpg)
 
 ## Turn-In Requirements
 
