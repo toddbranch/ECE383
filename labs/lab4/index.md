@@ -2,13 +2,13 @@
 
 ## Lab Overview
 
-In this lab, you will interface a number of peripherals to a simple PicoBlaze processor.  By using a USB-to-UART bridge, you will create a program that can take a command written over your computer’s serial port (i.e., remote terminal) and read or write to any one of your input or output peripherals.  Specifically, you will need to control the following on your development board: LEDs and switches.  All characters typed by the user must be echoed.
+In the first portion of this lab, you will interface a number of peripherals to a simple PicoBlaze processor.  By using a USB-to-UART bridge, you will create a program that can take a command written over your computer’s serial port (i.e., remote terminal) and read or write to any one of your input or output peripherals.  Specifically, you will need to control the following on your development board: LEDs and switches.
 
 In the second part of the lab, you will implement the same logic, but use the MicroBlaze processor instead.  You will also add a VGA output peripheral. 
 
 ## System Overview
 
-Your software will read in three digit commands along with optional parameters.  The list of commands you must implement is provided in Table 1.  The commands are executed by your code as soon as the user finished typing (i.e., they do not have to press “Enter”).
+Your software will read in three digit commands along with optional parameters.  The list of commands you must implement is provided in Table 1.  The commands are executed by your code as soon as the user finishes typing (i.e., they do not have to press "Enter").
 
 | Command | Description |
 | :-: | :-: |
@@ -35,9 +35,18 @@ Turn in a hard copy of your software and VHDL code along with simulation screens
 
 You should use the openPICIDE software to write and simulate your assembly code, as shown in class.  Make sure you have the following settings:
 
-- Spartan 6 FPGA
-- Memory Bank Size of 1024 instructions
-- Select the VHDL PicoBlaze ROM template from the course website as your "VHDL Template."
+- Settings => Processor
+  - Processor: Xilinx PicoBlaze Family
+  - Processor
+    - Derivate: PicoBlaze 6
+    - Scratchpad size: 64
+    - Memory bank count: 1
+    - Memory bank size: 1024 instructions
+    - Shared memory location: Low address range
+    - Interrupt vector: 1023
+  - Compiler
+    - Entity name: custom_rom (or whatever you want to call it)
+    - VHDL template file: ROM_form.vhd (from the PicoBlaze files zip)
 
 ## PicoBlaze Implementation
 
