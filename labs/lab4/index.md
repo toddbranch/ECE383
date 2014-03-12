@@ -2,7 +2,7 @@
 
 ## Lab Overview
 
-In the first portion of this lab, you will interface a number of peripherals to a simple PicoBlaze processor.  By using a USB-to-UART bridge, you will create a program that can take a command written over your computer’s serial port (i.e., remote terminal) and read or write to any one of your input or output peripherals.  Specifically, you will need to control the following on your development board: LEDs and switches.
+In the first portion of this lab, you will interface a number of peripherals to a simple PicoBlaze processor.  By using a USB-to-UART bridge, you will create a program that can take a command written over your computer's serial port (i.e., remote terminal) and read or write to any one of your input or output peripherals.  Specifically, you will need to control the following on your development board: LEDs and switches.
 
 In the second part of the lab, you will implement the same logic, but use the MicroBlaze processor instead.  You will also add a VGA output peripheral. 
 
@@ -48,15 +48,21 @@ You should use the openPICIDE software to write and simulate your assembly code,
     - Entity name: custom_rom (or whatever you want to call it)
     - VHDL template file: ROM_form.vhd (from the PicoBlaze files zip)
 
-## PicoBlaze Implementation
+## Required Functionality (PicoBlaze)
 
-You must design your hardware and software implementation for this lab.
+- Demonstrate the ability to echo a character that is sent using UART (i.e., you recieve the character with `uart_rx` and sned back the same character through `uart_tx`).  Do this using the provided Xilinx UART modules.  **DO THIS FIRST**
+- Demonstrate the ability to handle the `swt` command
+- Demonstrate the ability to handle the `led` command
 
-## MicroBlaze Implementation
+## Required Functionality (MicroBlaze)
 
-With MicroBlaze, recreate the same functionality as in the first part of this lab.  However, you must also add a vga command that allows the user to specify the background color to send to the VGA monitor.
+With MicroBlaze, recreate the same functionality as in the first part of this lab.
 
 _Note_: Never connect any of your ports to the `GCLK` signal.   Or you will get a PAR error and your design will not work correctly.
+
+## A Functionality (MicroBlaze)
+
+Add a `vga` command that allows the user to specify the background color to send to the VGA monitor.
 
 ## Lab Hints
 
@@ -98,6 +104,8 @@ Add additional features to this lab for extra credit.  Here are a few ideas, but
 - Add error checking to the input.  Display an error message if the command is not valid.
 - Add another unique (i.e., non-trivial – so just using the push-buttons as another input would not count) peripheral to your design.  For example, you could use the character generator module created earlier in the course. Another, perhaps easier, option is to add the seven-segment displays an output.
 
+## Free Code
+
 ```vhdl
 entity ascii_to_nibble is
     port ( ascii : in std_logic_vector(7 downto 0);
@@ -137,8 +145,8 @@ end atlys_remote_terminal_pb;
 | Item | Grade | Points | Out of | Date | Due |
 |:-: | :-: | :-: | :-: | :-: |
 | Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L23 |
-| Required Functionality (PicoBlaze) | **On-Time**------------------------------------------------------------------**Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days | | 40 | | COB L24 |
-| Required Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 40 | | COB L28 |
+| Required Functionality (PicoBlaze) | **On-Time**------------------------------------------------------------------**Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days | | 30 | | COB L24 |
+| Required Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 20 | | COB L28 |
 | A Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L28 |
 | Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L29 |
 | Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L29 |
