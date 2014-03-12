@@ -122,3 +122,16 @@ end atlys_remote_terminal_pb;
 ```
 
 **Code Listing 1** - Entity templates for the lab to ensure consistency between student designs.
+
+## Grading
+
+| Item | Grade | Points | Out of | Date | Due |
+|:-: | :-: | :-: | :-: | :-: |
+| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | 10 | BOC L23 |
+| Required Functionality (PicoBlaze) | **On-Time**------------------------------------------------------------------**Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days | 40 | COB L24 |
+| Required Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 40 | | COB L28 |
+| A Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L28 |
+| Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L29 |
+| Code Style | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L29 |
+| README | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 20 | | COB L29 |
+| **Total** | | | **100** | | |
