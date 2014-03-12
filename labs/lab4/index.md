@@ -8,7 +8,7 @@ In the second part of the lab, you will implement the same logic, but use the Mi
 
 ## System Overview
 
-Your software will read in three digit commands along with optional parameters.  The list of commands you must implement is provided in Table 1.  The commands are executed by your code as soon as the user finishes typing (i.e., they do not have to press "Enter").
+Your software will read in three-digit commands along with optional parameters.  The list of commands you must implement is provided in Table 1.  The commands are executed by your code as soon as the user finishes typing (i.e., they do not have to press "Enter").
 
 | Command | Description |
 | :-: | :-: |
@@ -50,7 +50,7 @@ You should use the openPICIDE software to write and simulate your assembly code,
 
 ## Required Functionality (PicoBlaze)
 
-- Demonstrate the ability to echo a character that is sent using UART (i.e., you recieve the character with `uart_rx` and sned back the same character through `uart_tx`).  Do this using the provided Xilinx UART modules.  **DO THIS FIRST**
+- Demonstrate the ability to echo a character that is sent using UART (i.e., you recieve the character with `uart_rx` and send back the same character through `uart_tx`).  Do this using the provided Xilinx UART modules.  **DO THIS FIRST**
 - Demonstrate the ability to handle the `swt` command
 - Demonstrate the ability to handle the `led` command
 
@@ -58,7 +58,7 @@ You should use the openPICIDE software to write and simulate your assembly code,
 
 With MicroBlaze, recreate the same functionality as in the first part of this lab.
 
-_Note_: Never connect any of your ports to the `GCLK` signal.   Or you will get a PAR error and your design will not work correctly.
+_Note_: Never connect any of your ports to the `GCLK` signal, or you will get a PAR error and your design will not work correctly.
 
 ## A Functionality (MicroBlaze)
 
@@ -67,8 +67,11 @@ Add a `vga` command that allows the user to specify the background color to send
 ## Lab Hints
 
 - Define your ports as constants in your PicoBlaze and VHDL code.  This will make your code much more readable.
+- You'll need the USB-UART driver - [download it here!](http://www.exar.com/common/content/default.aspx?id=10296)
+  - The UART port is the microUSB connector labeled as such - it's close to the programming port on your board
+  - Use the same cable you program the board with to communicate over UART
 - Tera Term is freeware software that can communicate over your computer's serial ports.   [Click here to download!](http://en.sourceforge.jp/projects/ttssh2/downloads/60733/teraterm-4.82.exe/)
-  - Configure the speed to Tera Term by using the “Setup” → “Serial Port” menu option
+  - Configure the speed to Tera Term by using the "Setup" => "Serial Port" menu option
   - Select the USB-UART serial port (check your computer Device Manager if you are unsure of the port).
   - The baud rate should be 9600 for this lab
 
@@ -76,13 +79,9 @@ Add a `vga` command that allows the user to specify the background color to send
 
 **Figure 2** - Example serial configuration for Tera Term.
 
-- You'll need the USB-UART driver - [download it here!](http://www.exar.com/common/content/default.aspx?id=10296)
-  - The UART port is the microUSB connector labeled as such - it's close to the programming port on your board
-  - Use the same cable you program the board with to communicate over UART
-- Note: Your "serial in" - i.e., where the computer is sending you data for the FPGA to read - pin is A16.  Look at the datasheet to find the "serial out" pin location.
+- Note: Your "serial in" - i.e., where the computer is sending you data for the FPGA to read - pin is A16.  Look at the datasheet or master UCF to find the "serial out" pin location.
 - To avoid crossing clock domains, all your synchronous elements should be based on a 25 MHz clock.
 - Take advantage of the simulator in the openPICIDE.
-- Build converter modules (e.g., `ascii_to_nibble`, `nibble_to_ascii`, etc.).
 - Use the Xilinx-provided `uart_tx6` and `uart_rx6` modules rather than writing your own UART controller.
   - They are available in the PicoBlaze files zip in the `UART_and_PicoTerm` folder
   - The reference manual for these modules is available in the folder as well
@@ -90,7 +89,8 @@ Add a `vga` command that allows the user to specify the background color to send
   - You will probably need to manually create the `write_buffer` signal rather
     than using PicoBlaze’s `write_strobe` signal due to timing issues.  The
 same applies for the `write_strobe` signal.
-- Start small and work larger.  Here is a sample approach to this problem:
+- Build converter modules (e.g., `ascii_to_nibble`, `nibble_to_ascii`, etc.).
+ Start small and work larger.  Here is a sample approach to this problem:
   1. Ensure the UART configuration is correct on your FPGA and drivers are
 installed on your computer.  Do a hardware loopback on the UART module
 (`serial_out <= serial_in;`).
