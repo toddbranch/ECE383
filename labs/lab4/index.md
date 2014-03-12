@@ -67,7 +67,7 @@ Add a `vga` command that allows the user to specify the background color to send
 ## Lab Hints
 
 - Define your ports as constants in your PicoBlaze and VHDL code.  This will make your code much more readable.
-- Tera Term is freeware software that can communicate over your computer’s serial ports.   You can download it from the course website.
+- Tera Term is freeware software that can communicate over your computer's serial ports.   [Click here to download!](http://en.sourceforge.jp/projects/ttssh2/downloads/60733/teraterm-4.82.exe/)
   - Configure the speed to Tera Term by using the “Setup” → “Serial Port” menu option
   - Select the USB-UART serial port (check your computer Device Manager if you are unsure of the port).
   - The baud rate should be 9600 for this lab
@@ -95,14 +95,6 @@ installed on your computer.  Do a hardware loopback on the UART module
   3. Connect the `uart_tx6` and `uart_rx6` modules to a simple PicoBlaze program that takes the serial input (if available) and writes it to the serial output.
   4. Expand your PicoBlaze code to process the `swt` command.
   5. Expand your PicoBlaze code to process the `led ##` command.
-
-## Extra Credit
-
-Add additional features to this lab for extra credit.  Here are a few ideas, but you can come up with your own as well:
-
-- Add a command-line prompt similar to what you see when you are using cmd.exe in windows.
-- Add error checking to the input.  Display an error message if the command is not valid.
-- Add another unique (i.e., non-trivial – so just using the push-buttons as another input would not count) peripheral to your design.  For example, you could use the character generator module created earlier in the course. Another, perhaps easier, option is to add the seven-segment displays an output.
 
 ## Free Code
 
