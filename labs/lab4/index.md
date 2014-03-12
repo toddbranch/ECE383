@@ -26,9 +26,9 @@ Your software will read in three digit commands along with optional parameters. 
 Create a PicoBlaze design that meets the following requirements:
 
 1. Defines the following ports:
-  1. Port `0xAF` – Read switch inputs
-  2. Port `0x07` – Read push button inputs
-  3. Port `0x07` – write button values to upper-four LEDs, and lower-four switch values to the lower-four LEDs.
+  1. Port `0xAF` - Read switch inputs
+  2. Port `0x07` - Read push button inputs
+  3. Port `0x07` - write button values to upper-four LEDs, and lower-four switch values to the lower-four LEDs.
 2. Constantly read in the push buttons and lower-four bits of the switches and writes those values out to the LEDs.
 
 Turn in a hard copy of your software and VHDL code along with simulation screenshots to demonstrate your design works correctly.
@@ -127,8 +127,8 @@ end atlys_remote_terminal_pb;
 
 | Item | Grade | Points | Out of | Date | Due |
 |:-: | :-: | :-: | :-: | :-: |
-| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | 10 | BOC L23 |
-| Required Functionality (PicoBlaze) | **On-Time**------------------------------------------------------------------**Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days | 40 | COB L24 |
+| Prelab | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus | | 10 | | BOC L23 |
+| Required Functionality (PicoBlaze) | **On-Time**------------------------------------------------------------------**Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days | | 40 | | COB L24 |
 | Required Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 40 | | COB L28 |
 | A Functionality (MicroBlaze) | **On-Time** ------------------------------------------------------------------ **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 10 | | COB L28 |
 | Use of Git / Github | **On-Time:** 0 ---- Check Minus ---- Check ---- Check Plus ---- **Late:** 1Day ---- 2Days ---- 3Days ---- 4+Days| | 5 | | COB L29 |
