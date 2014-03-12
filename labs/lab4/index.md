@@ -76,13 +76,16 @@ Add a `vga` command that allows the user to specify the background color to send
 
 **Figure 2** - Example serial configuration for Tera Term.
 
+- You'll need the USB-UART driver - [download it here!](http://www.exar.com/common/content/default.aspx?id=10296)
+  - The UART port is the microUSB connector labeled as such - it's close to the programming port on your board
+  - Use the same cable you program the board with to communicate over UART
 - Note: Your "serial in" - i.e., where the computer is sending you data for the FPGA to read - pin is A16.  Look at the datasheet to find the "serial out" pin location.
 - To avoid crossing clock domains, all your synchronous elements should be based on a 25 MHz clock.
 - Take advantage of the simulator in the openPICIDE.
 - Build converter modules (e.g., `ascii_to_nibble`, `nibble_to_ascii`, etc.).
-- Use the Xilinx-provided (available on the course website) `uart_tx6` and
-  `uart_rx6` modules rather than writing your own UART controller.
-  - The reference manual for these modules is available on the course website.
+- Use the Xilinx-provided `uart_tx6` and `uart_rx6` modules rather than writing your own UART controller.
+  - They are available in the PicoBlaze files zip in the `UART_and_PicoTerm` folder
+  - The reference manual for these modules is available in the folder as well
   - You must create a module, `clk_to_baud`, that generates an enable signal that pulses high for one clock cycle.  Based on the time between these pulses, your baud rate is 16 times that value.  For example, if you have an enable pulse once every 1 ms, your baud rate is (1 / (16 * 1ms)) = 62,500 baud.
   - You will probably need to manually create the `write_buffer` signal rather
     than using PicoBlaze’s `write_strobe` signal due to timing issues.  The
@@ -91,7 +94,7 @@ same applies for the `write_strobe` signal.
   1. Ensure the UART configuration is correct on your FPGA and drivers are
 installed on your computer.  Do a hardware loopback on the UART module
 (`serial_out <= serial_in;`).
-  2. Write your clk_to_baud module.  A good example is provided in the Xilinx UART manual on the course website.  Simulate this design to ensure it runs correctly.
+  2. Write your `clk_to_baud` module.  A good example is provided in the Xilinx UART manual.  Simulate this design to ensure it runs correctly.
   3. Connect the `uart_tx6` and `uart_rx6` modules to a simple PicoBlaze program that takes the serial input (if available) and writes it to the serial output.
   4. Expand your PicoBlaze code to process the `swt` command.
   5. Expand your PicoBlaze code to process the `led ##` command.
