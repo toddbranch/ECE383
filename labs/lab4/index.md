@@ -19,7 +19,7 @@ Your software will read in three-digit commands along with optional parameters. 
 
 ![Figure 1](figure1.jpg)
 
-**Figure 1**: Sample terminal session that shows all the features needed for this lab.  This session set the LEDs to 0x75 and shows that the switches are currently set to the value 0x25.
+**Figure 1**: Sample terminal session that shows all the features needed for this lab.  This session set the LEDs to `0x75` and shows that the switches are currently set to the value `0x25`.
 
 ## Prelab Assignment
 
@@ -87,8 +87,8 @@ Add a `vga` command that allows the user to specify the background color to send
   - The reference manual for these modules is available in the folder as well
   - You must create a module, `clk_to_baud`, that generates an enable signal that pulses high for one clock cycle.  Based on the time between these pulses, your baud rate is 16 times that value.  For example, if you have an enable pulse once every 1 ms, your baud rate is (1 / (16 * 1ms)) = 62,500 baud.
   - You will probably need to manually create the `write_buffer` signal rather
-    than using PicoBlaze’s `write_strobe` signal due to timing issues.  The
-same applies for the `write_strobe` signal.
+    than using PicoBlaze's `write_strobe` signal due to timing issues.  The
+same applies for the `read_buffer` signal.
 - Build converter modules (e.g., `ascii_to_nibble`, `nibble_to_ascii`, etc.).
  Start small and work larger.  Here is a sample approach to this problem:
   1. Ensure the UART configuration is correct on your FPGA and drivers are
