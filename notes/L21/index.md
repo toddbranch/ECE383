@@ -4,6 +4,9 @@ title = 'PicoBlaze and HW/SW Partitioning'
 
 ## Readings
 
+- Review the KCPSM6 User Guide - inside the [PicoBlaze files zip](/datasheets/)
+  - Reading manuals like this is great practice for the Final Project!
+
 ## Instructor Reference
 
 - Saas, Chapter 4
@@ -12,6 +15,11 @@ title = 'PicoBlaze and HW/SW Partitioning'
 ## Assignments
 
 ## Lesson Outline
+
+- Admin
+- Main Lesson
+- Intro Final Project
+- Walk Through HW
 
 ## Admin
 
@@ -41,9 +49,23 @@ pushes.
 
 ## Main Lesson
 
-## Walk Through Homework
+PicoBlaze is an 8-bit CPU - how big was the MSP430?
 
-- Give students a break - has been a busy week
+PicoBlaze has no special purpose registers - was that true of the MSP430?
+
+Implementation has two main components - the PicoBlaze core and a custom ROM containing your assembled code.  Generics allow for configuration.
+
+Why 4k instructions?  Based on address size!  2^12 = 4096
+
+In the files zip, the User Guide and `kcpsm6_design_template` both contain a ton of useful code to help you.
+
+Our standard 100MHz `clk` will work fine with the PicoBlaze.
+
+You're creating a ROM hardware component with your code.
+
+Recommended to use 1K block size due to hardware on Spartan 6 FPGA.
+
+Setting JTGA Loader to 1 helps you load modifications to your ROM much faster - only one chip can have this set at a time.
 
 ## Introduce Final Project
 
@@ -55,3 +77,7 @@ pushes.
 - Example projects / ideas
   - 
 - Tour of the parts room
+
+## Walk Through Homework
+
+- Give students a break - has been a busy week
