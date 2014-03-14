@@ -80,7 +80,7 @@ Add a `vga` command that allows the user to specify the background color to send
 **Figure 2** - Example serial configuration for Tera Term.
 
 - Note: Your "serial in" - i.e., where the computer is sending you data for the FPGA to read - pin is A16.  Look at the datasheet or master UCF to find the "serial out" pin location.
-- To avoid crossing clock domains, all your synchronous elements should be based on a 25 MHz clock.
+- To avoid crossing clock domains, all your synchronous elements should be based on the same `clk`
 - Take advantage of the simulator in the openPICIDE.
 - Use the Xilinx-provided `uart_tx6` and `uart_rx6` modules rather than writing your own UART controller.
   - They are available in the PicoBlaze files zip in the `UART_and_PicoTerm` folder
@@ -91,23 +91,30 @@ Add a `vga` command that allows the user to specify the background color to send
 same applies for the `read_buffer` signal.
 - Build converter modules (e.g., `ascii_to_nibble`, `nibble_to_ascii`, etc.).
  Start small and work larger.  Here is a sample approach to this problem:
-  1. Ensure the UART configuration is correct on your FPGA and drivers are
+  1. Write your `clk_to_baud` module.  A good example is provided in the Xilinx UART manual.  Simulate this design to ensure it runs correctly.
+  2. Ensure the UART configuration is correct on your FPGA and drivers are
 installed on your computer.  Do a hardware loopback on the UART module
 (`serial_out <= serial_in;`).
-  2. Write your `clk_to_baud` module.  A good example is provided in the Xilinx UART manual.  Simulate this design to ensure it runs correctly.
   3. Connect the `uart_tx6` and `uart_rx6` modules to a simple PicoBlaze program that takes the serial input (if available) and writes it to the serial output.
-  4. Expand your PicoBlaze code to process the `swt` command.
-  5. Expand your PicoBlaze code to process the `led ##` command.
+  4. Expand your PicoBlaze code to accept three-character commands, then go to the next line.
+    - Going to the beginning of the next line requires a New Line and Carriage Return
+  5. Expand your PicoBlaze code to process the `swt` command.
+  6. Expand your PicoBlaze code to process the `led ##` command.
+- When simulating, ensure you provide valid `serial_in` data - see the UART manual for details.  Here's a screenshot of my simulation:
+
+![Simulation Screenshot](lab4_testbench.jpg)
 
 ## Free Code
 
 ```vhdl
+-- useful for the led command
 entity ascii_to_nibble is
     port ( ascii : in std_logic_vector(7 downto 0);
            nibble  : out std_logic_vector(3 downto 0)
          );
 end ascii_to_nibble;
 
+-- useful for the swt command
 entity nibble_to_ascii is
     port ( nibble : in std_logic_vector(3 downto 0);
            ascii  : out std_logic_vector(7 downto 0)
@@ -115,9 +122,9 @@ entity nibble_to_ascii is
 end nibble_to_ascii;
 
 entity clk_to_baud is
-    port ( clk         : in std_logic;  -- 25 MHz
+    port ( clk         : in std_logic;
            reset       : in std_logic;
-           baud_16x_en : out std_logic -- 16*9.6 kHz
+           baud_16x_en : out std_logic
         );
 end clk_to_baud;
 
