@@ -100,7 +100,7 @@ installed on your computer.  Do a hardware loopback on the UART module
     - Going to the beginning of the next line requires a New Line and Carriage Return
   5. Expand your PicoBlaze code to process the `swt` command.
   6. Expand your PicoBlaze code to process the `led ##` command.
-- When simulating, ensure you provide valid `serial_in` data - see the UART manual for details.  Here's a screenshot of my simulation:
+- When simulating, ensure you provide valid `serial_in` data - see the UART manual for details.  Here's a screenshot of my simulation - note the time scale:
 
 ![Simulation Screenshot](lab4_testbench.jpg)
 
