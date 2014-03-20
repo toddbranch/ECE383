@@ -2,6 +2,9 @@ title = 'Datasheets'
 
 # Datasheets
 
+- [Xilinx Dev Tools Download](http://www.xilinx.com/support/download/index.htm)
+- [Install Directions](tutorial_install_directions.txt)
+
 - [Atlys Board Reference Manual](Atlys_rm.pdf)
 - [Atlys Master UCF](AtlysGeneral.ucf)
 - [Spartan 6 Unisim Reference](spartan6_hdl.pdf)
@@ -14,6 +17,13 @@ title = 'Datasheets'
 - [OpenPIC
   IDE](http://www.openpicide.org/content/about/)
   - [v0.5.8 Download](openPICIDE_v0.5.8_win_setup.exe)
+
+## MicroBlaze
+
+- [MicroBlaze Tutorial](microblaze_tutorial.docx)
+- [Xilinx Documentation](http://www.xilinx.com/tools/microblaze.htm)
+- [Digilent Atlys BSB Support](http://www.digilentinc.com/Products/Detail.cfm?Prod=ATLYS)
+- [Digilent Plugin](http://www.digilentinc.com/Products/Detail.cfm?Prod=DIGILENT-PLUGIN)
 
 ## Miscellaneous
 

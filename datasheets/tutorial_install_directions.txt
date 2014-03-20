@@ -1,0 +1,17 @@
+- Copy the "14.2" folder to your computer from \\dfec\classes\Software\xilinx
+- Run "xsetup.exe"
+- When asked which edition to install, select "ISE Design Suite: System Edition"
+- Leave the defaults for everything else
+- After installation, you will be given the option to aquire a license.  You have two options.  Choose *one* of the below options, based on which best matches your situtation:
+	-- If you plan to frequently use these tools off the USAFA network, select "Get Free ISE WebPack License".  This is the preferred option as the software is fully unlocked (runs faster, more features available, etc.).  However, whenever you are *not* on the USAFA network, the software will run slower than if you had chosen to register the WebPack option (next option below).
+		--- Go through the process to register for WebPack; you will need to create an account at Xilinx.com in the browswer window that opens.
+		--- The Xilinx.lic file will be emailed to you.
+		--- Go to the "Manage Xilinx Licenses" tab of the Xilinx Licence Configuration Manager
+		--- Click the "Copy License..." button.
+		--- Browse to the location of the Xilinx.lic
+		--- Xilinx ISE is now licensed
+	-- If you plan to use these tools mostly on the USAFA network, select "Locate Existing License(s)"
+		--- Click the "Copy License..." button
+		--- Select: \\dfec\classes\Software\xilinx\license\Xilinx.lic
+		--- Xilinx ISE is now licensed
+- You can now launch Xilinx PlanAhead from the shortcut on your desktop.
