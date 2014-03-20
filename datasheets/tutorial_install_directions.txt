@@ -1,4 +1,4 @@
-- Copy the "14.2" folder to your computer from \\dfec\classes\Software\xilinx
+- Copy the "14.2" folder to your computer from \\dfec-lic1\classes\Software\xilinx
 - Run "xsetup.exe"
 - When asked which edition to install, select "ISE Design Suite: System Edition"
 - Leave the defaults for everything else
@@ -12,6 +12,6 @@
 		--- Xilinx ISE is now licensed
 	-- If you plan to use these tools mostly on the USAFA network, select "Locate Existing License(s)"
 		--- Click the "Copy License..." button
-		--- Select: \\dfec\classes\Software\xilinx\license\Xilinx.lic
+		--- Select: \\dfec-lic1\classes\Software\xilinx\license\Xilinx.lic
 		--- Xilinx ISE is now licensed
 - You can now launch Xilinx PlanAhead from the shortcut on your desktop.
