@@ -23,13 +23,13 @@ The steps in this section will guide you through the process of creating a hardw
 1. Open Xilinx Platform Studio
 ![Open Platform Studio](open_platform_studio.jpg)
 2. Click “Create New Project Using Base System Builder”
-
+![](new_project.jpg)
 3. In the first window of the wizard:
-
-a. Under “New Project,” browse to the folder you would like to save your project files.  Note: This does not create a subdirectory for you!
-b. Select the “AXI System” as your interconnect type
-c. Under “Set Project Peripheral Repository Search Path,” enter the location you extracted the Atlys support zip file.  Note: You must select the “Atlys_AXI*/lib” subdirectory.
-d. Click “OK”
+![](first_window.jpg)
+  a. Under “New Project,” browse to the folder you would like to save your project files.  Note: This does not create a subdirectory for you!
+  b. Select the “AXI System” as your interconnect type
+  c. Under “Set Project Peripheral Repository Search Path,” enter the location you extracted the Atlys support zip file.  Note: You must select the “Atlys_AXI*/lib” subdirectory.
+  d. Click “OK”
 4. Now you enter into the Base System Builder wizard setup, which is specific to the Atlys board.  This wizard will set which board you are working with, how to configure the MicroBlaze processor(s), and which peripherals you will need.  In general, leave everything to their default values, except where noted here.
 a. First window: Select the Digilint Atlys board, Revision C
 

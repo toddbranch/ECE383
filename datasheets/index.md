@@ -21,7 +21,7 @@ title = 'Datasheets'
 ## MicroBlaze
 
 - [MicroBlaze Tutorial(docx)](microblaze_tutorial.docx)
-- [MicroBlaze Tutorial(md)](microblaze_tutorial.md)
+- [MicroBlaze Tutorial(md)](microblaze_tutorial.html)
 - [Xilinx Documentation](http://www.xilinx.com/tools/microblaze.htm)
 - [Digilent Atlys BSB Support](http://www.digilentinc.com/Products/Detail.cfm?Prod=ATLYS)
 - [Digilent Plugin](http://www.digilentinc.com/Products/Detail.cfm?Prod=DIGILENT-PLUGIN)
