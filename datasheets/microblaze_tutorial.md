@@ -156,11 +156,11 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 12. You have created the custom peripheral.  Now you need to update the "user logic" in the peripheral to implement the functionality you desire.
 13. Using your file browser, go to the location you saved your repository.  In my case, this is: C:\Users\michael.tanner\Development\FPGA\ip_repo\MyProcessorIPLib\pcores\microblaze_tutorial_v1_00_a
 14. You will see three different folders that make up your custom peripheral:
-a. data – this contains the "settings" for your peripheral.  In particular, you may need to modify the *.mpd and *.pao files.  XPS uses these files to determine the "interface" to your custom IP peripheral.
+a. data - this contains the "settings" for your peripheral.  In particular, you may need to modify the *.mpd and *.pao files.  XPS uses these files to determine the "interface" to your custom IP peripheral.
 i. The *.mpd file can be used to specify "ports" that will be connected to FPGA pins under the "Ports" tab of XPS.
 ii. The *.pao file lists all the VHDL files you need to build your peripheral.  If you add a separate file (e.g., video synchronization), you need to list it in this file.  Order matters, so place the dependent files last.
-b. devel – this contains the automatically generated project navigator files to help you develop and simulate your hardware design.
-c. hdl – this contains the actual VHDL files that implement the logic of your design.  If you add VHDL files to the peripheral, this is the directory you place them in.
+b. devel - this contains the automatically generated project navigator files to help you develop and simulate your hardware design.
+c. hdl - this contains the actual VHDL files that implement the logic of your design.  If you add VHDL files to the peripheral, this is the directory you place them in.
 15. To create our custom peripheral that allows up to write any value to the LEDs, we will take the following steps:
 a. Modify the *.mpd file to let XPS know about the "LED" port it can be connected to FPGA pins through your project’s UCF file.
 b. Modify the "your_peripheral.vhd" (the name of your peripheral) to add the "LED" output and then connect it into the structural instantiation of your "user logic."
