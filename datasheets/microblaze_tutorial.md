@@ -137,11 +137,15 @@ This section will guide you through the process of downloading your code (`.elf`
 1. Go to Xilinx Tools -> Configure JTAG Settings
 2. Under "Type," select "Digilent USB Cable" and then click "OK"
 
+![](configure_jtag.jpg)
+
 3. Click the "Program FPGA" button 
 4. Under the software configuration, choose the `*.elf` file that matches the name of your project.  Then click "Program"
 
+![](program_fpga.jpg)
+
 5. Once this process is complete, you can now open up your favorite serial terminal and see your characters echoed back from the FPGA.  Congratulations! You have created your first embedded MicroBlaze FPGA system!
-6. If you need to debug your software code, you can click the  button, "Launch on Hardware", to get a full debug interface.  From this debug window, you can step through the code, observe register/ variable values, set debug points, etcetera. [Note: When I did this in Xilinx 14.4, I needed to add a "Debug Configuration" of "Xilinx C/C++ ELF" in order to get the correct debug setup.  I left all the default settings, and it worked correctly with the hardware.]
+6. If you need to debug your software code, you can click the ![](debug.jpg) button, "Launch on Hardware", to get a full debug interface.  From this debug window, you can step through the code, observe register/ variable values, set debug points, etcetera. [Note: When I did this in Xilinx 14.4, I needed to add a "Debug Configuration" of "Xilinx C/C++ ELF" in order to get the correct debug setup.  I left all the default settings, and it worked correctly with the hardware.]
 7. What if you need to debug hardware?  Well, you should use a combination of robust simulations, hardware logic analyzers, and (if necessary) ChipScope.  The last option is beyond the scope of this course due to time constraints.
 1.7 Add Custom IP (LEDs)
 Now that we have learned how to work with pre-built hardware IP peripherals, you will now create a simple custom IP peripheral that allows you to access the LEDs from software.
