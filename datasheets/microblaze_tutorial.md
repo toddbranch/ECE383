@@ -183,9 +183,15 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 
 - You do not need to create a simulation platform for this example.
 
+![](sim_support.jpg)
+
 - Check the "Generate ISE and XST project files..." checkbox.
 
+![](gen_proj_files.jpg)
+
 - Click Finish
+
+![](finish.jpg)
 
 - You have created the custom peripheral.  Now you need to update the "user logic" in the peripheral to implement the functionality you desire.
 - Using your file browser, go to the location you saved your repository.  In my case, this is: `C:\Users\michael.tanner\Development\FPGA\ip_repo\MyProcessorIPLib\pcores\microblaze_tutorial_v1_00_a`
@@ -221,9 +227,15 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 - Add the peripheral to our XPS design
   - From the IP catalog, add your peripheral
 
+![](add_periph.jpg)
+
   - Under the "Bus Interfaces" tab, add the peripheral to the same bus as your MicroBlaze processor.
 
+![](same_bus.jpg)
+
   - Under the "Ports" tab, make an external connection for your peripheral’s LED port.
+
+![](external_connection.jpg)
 
   - Add the following lines to your UCF file:
 
@@ -237,6 +249,8 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 `net microblaze_tutorial_0_LED_pin(0) LOC=U18 | IOSTANDARD = LVCMOS33; `
 
   - Under the "Addresses" tab, change the base address for your custom peripheral to 0x83000000 with a size of 64K.
+
+![](base_address.jpg)
 
   - Note: If you ever make changes to your peripheral (pao, vhdl, mpd, etc.), you can update your XPS project by going to Project → Rescan User Repositories
 - Generate the bitfile
