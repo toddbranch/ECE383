@@ -40,11 +40,11 @@ The steps in this section will guide you through the process of creating a hardw
 - Now you enter into the Base System Builder wizard setup, which is specific to the Atlys board.  This wizard will set which board you are working with, how to configure the MicroBlaze processor(s), and which peripherals you will need.  In general, leave everything to their default values, except where noted here.
   - First window: Select the Digilint Atlys board, Revision C
 
-![](atlys_rev_c.jpg)
+  ![](atlys_rev_c.jpg)
 
   - Second window: Remove all the peripherals in the bottom portion of the window. 
 
-![](remove_peripherals.jpg)
+  ![](remove_peripherals.jpg)
 
 - There are three main tabs under the "System Assembly View" that you will work with.
 
@@ -83,6 +83,7 @@ The steps in this section will guide you through the process of creating a hardw
 - Finally, add the following lines to the UCF file so that the UART peripheral knows which pins to use for RX and TX:
 
 `net axi_uartlite_0_RX_pin LOC=A16 | IOSTANDARD = LVCMOS33;`
+
 `net axi_uartlite_0_TX_pin LOC=B16 | IOSTANDARD = LVCMOS33;`
 
 - Finally, click the "Generate BitStream" button to create your hardware bitfile.  Note: This process will take about 10 minutes!  For a more complicated design, it can take hours or days.
