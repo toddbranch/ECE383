@@ -228,30 +228,30 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 - Add the peripheral to our XPS design
   - From the IP catalog, add your peripheral
 
-![](add_periph.jpg)
+  ![](add_periph.jpg)
 
   - Under the "Bus Interfaces" tab, add the peripheral to the same bus as your MicroBlaze processor.
 
-![](same_bus.jpg)
+  ![](same_bus.jpg)
 
   - Under the "Ports" tab, make an external connection for your peripheral's LED port.
 
-![](external_connection.jpg)
+  ![](external_connection.jpg)
 
   - Add the following lines to your UCF file:
 
-`net microblaze_tutorial_0_LED_pin(7) LOC=N12 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(6) LOC=P16 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(5) LOC=D4 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(4) LOC=M13 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(3) LOC=L14 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(2) LOC=N14 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(1) LOC=M14 | IOSTANDARD = LVCMOS33;`
-`net microblaze_tutorial_0_LED_pin(0) LOC=U18 | IOSTANDARD = LVCMOS33; `
+  `net microblaze_tutorial_0_LED_pin(7) LOC=N12 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(6) LOC=P16 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(5) LOC=D4 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(4) LOC=M13 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(3) LOC=L14 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(2) LOC=N14 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(1) LOC=M14 | IOSTANDARD = LVCMOS33;`
+  `net microblaze_tutorial_0_LED_pin(0) LOC=U18 | IOSTANDARD = LVCMOS33; `
 
   - Under the "Addresses" tab, change the base address for your custom peripheral to 0x83000000 with a size of 64K.
 
-![](base_address.jpg)
+  ![](base_address.jpg)
 
   - Note: If you ever make changes to your peripheral (`pao`, `vhdl`, `mpd`, etc.), you can update your XPS project by going to Project -> Rescan User Repositories
 - Generate the bitfile
