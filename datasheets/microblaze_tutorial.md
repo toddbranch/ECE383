@@ -243,6 +243,7 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 ## Update Software
 
 Finally, you will write software that reads in a value from UART, echoes that value to the UART and LEDs.
+
 - Confirm that you want to import the new bitfile and design to your SDK project.
 - Add the following lines to your main.c file, where you deem appropriate:
 `#include <xil_io.h>`
