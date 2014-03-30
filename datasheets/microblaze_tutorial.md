@@ -147,22 +147,39 @@ This section will guide you through the process of downloading your code (`.elf`
 5. Once this process is complete, you can now open up your favorite serial terminal and see your characters echoed back from the FPGA.  Congratulations! You have created your first embedded MicroBlaze FPGA system!
 6. If you need to debug your software code, you can click the ![](debug.jpg) button, "Launch on Hardware", to get a full debug interface.  From this debug window, you can step through the code, observe register/ variable values, set debug points, etcetera. [Note: When I did this in Xilinx 14.4, I needed to add a "Debug Configuration" of "Xilinx C/C++ ELF" in order to get the correct debug setup.  I left all the default settings, and it worked correctly with the hardware.]
 7. What if you need to debug hardware?  Well, you should use a combination of robust simulations, hardware logic analyzers, and (if necessary) ChipScope.  The last option is beyond the scope of this course due to time constraints.
-1.7 Add Custom IP (LEDs)
+
+## Add Custom IP (LEDs)
+
 Now that we have learned how to work with pre-built hardware IP peripherals, you will now create a simple custom IP peripheral that allows you to access the LEDs from software.
-1. In Xilinx Platform Studio, go to Hardware → Create or Import Peripheral
+
+1. In Xilinx Platform Studio, go to Hardware -> Create or Import Peripheral
 2. On the next screen, be sure "Create templates for new peripheral" is selected
+
+![](periph_templates.jpg)
 
 3. On the next screen, create an EDK user repository where you can store all the peripherals you create in this class.  You will probably want to be able to reuse this peripheral in other projects.
 
+![](create_periph.jpg)
+
 4. Type whatever name (without spaces!) you want for your peripheral.
+
+![](name_version.jpg)
 
 5. The MicroBlaze processor in our design is using the AXI interface.  Be sure to select "AXI4-Lite" as the interface type.
 
+![](bus_interfaces.jpg)
+
 6. Leave "User logic software register" and "Include data phase timer" checked.
+
+![](services.jpg)
 
 7. Change the number of software-accessible registers to 8.  This will create the boilerplate VHDL code for 8 32-bit registers that you can read from and write to from software.  Eight is overkill for this example, but the VHDL code will illustrate how to expand your design to include more registers.
 
+![](sw_register.jpg)
+
 8. Leave the defaults on the IP Interconnect screen.
+
+![](ip_interconnect.jpg)
 
 9. You do not need to create a simulation platform for this example.
 
