@@ -33,3 +33,8 @@ title = 'Datasheets'
 ### git / vim / Command Line
 
 - [See ECE382 course website.](http://www.ece382.com/datasheets/)
+
+### Markdown
+
+- [Dillinger.io - web-based editor and previewer](http://dillinger.io/)
+- [Markdownpad - editor / previewer for Windows](http://markdownpad.com/)

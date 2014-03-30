@@ -12,6 +12,7 @@ You must complete the following installation items before you can follow the ste
 - Download the Atlys_BSB_Support_v_3_6.zip from the Digilent Atlys support site.
   - Extract this folder to a permanent location on your computer.
   - This tutorial assumes you have it extracted to: `C:/Xilinx/Atlys_BSB_Support_v_3_6`
+  - **Ensure you run the `inst_uninst` batch file in the `Digilent_AXI_IPCore_Support_v_1_33` folder!**
 - From the Digilent website, download and install the "Digilent Plugin for Xilinx Tools."
   - The installation instructions are included as a PDF in the downloaded zip file.
   - This is the most important paragraph in the installation instructions: *The Digilent Plug-in can be installed in the ISE installation directory by copying libCseDigilent.dll (libCseDigilent.so on Linux systems) and libCseDigilent.xml to the plugins directory. For the Windows version of ISE Design Suite, the typical location is `C:\Xilinx\14.1\ISE_DS\ISE\lib\nt\plugins\Digilent\libCseDigilent`. For 64-bit Windows, use nt64 inplace of nt.*
@@ -91,14 +92,24 @@ Now that the hardware is designed, you can write software to run on your embedde
 
 - Click the "Export Design" button, and then select "Export & Launch SDK."  Make sure the "Include bitstream and BMM" checkbox is checked.
 
+![](export_design.jpg)
+
 - Xilinx SDK will ask you where you want to place your "workspace."  Create a new folder somewhere on your computer where you will store the source projects for this tutorial.
 
-- Click File → New → Application Project
+![](workspace.jpg)
+
+- Click File -> New -> Application Project
 - Name your project anything you want (without spaces!), and then click "Next."
+
+![](application_project.jpg)
 
 - Select "Empty Application"
 
-- In the "src" folder of your new project, create a new C source file named "main.c".
+![](empty_application.jpg)
+
+- In the `src` folder of your new project, create a new C source file named `main.c`.
+
+![](new_source.jpg)
 
 - Type the following code into the new file:
 
@@ -120,12 +131,14 @@ int main(void)
 ```
 
 ## Run & Debug Software
-This section will guide you through the process of downloading your code (.elf file) and hardware (.bit file) onto the FPGA.  You will even learn how to debug your code, including breakpoints and looking at registers/variable values, real-time on the FPGA hardware.
-1. Go to Xilinx Tools → Configure JTAG Settings
+
+This section will guide you through the process of downloading your code (`.elf` file) and hardware (`.bit` file) onto the FPGA.  You will even learn how to debug your code, including breakpoints and looking at registers/variable values, real-time on the FPGA hardware.
+
+1. Go to Xilinx Tools -> Configure JTAG Settings
 2. Under "Type," select "Digilent USB Cable" and then click "OK"
 
 3. Click the "Program FPGA" button 
-4. Under the software configuration, choose the *.elf file that matches the name of your project.  Then click "Program"
+4. Under the software configuration, choose the `*.elf` file that matches the name of your project.  Then click "Program"
 
 5. Once this process is complete, you can now open up your favorite serial terminal and see your characters echoed back from the FPGA.  Congratulations! You have created your first embedded MicroBlaze FPGA system!
 6. If you need to debug your software code, you can click the  button, "Launch on Hardware", to get a full debug interface.  From this debug window, you can step through the code, observe register/ variable values, set debug points, etcetera. [Note: When I did this in Xilinx 14.4, I needed to add a "Debug Configuration" of "Xilinx C/C++ ELF" in order to get the correct debug setup.  I left all the default settings, and it worked correctly with the hardware.]
