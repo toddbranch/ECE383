@@ -81,9 +81,10 @@ The steps in this section will guide you through the process of creating a hardw
 ![](addresses.jpg)
 
 - Finally, add the following lines to the UCF file so that the UART peripheral knows which pins to use for RX and TX:
-`net axi_uartlite_0_RX_pin LOC=A16 | IOSTANDARD = LVCMOS33;`
 
+`net axi_uartlite_0_RX_pin LOC=A16 | IOSTANDARD = LVCMOS33;`
 `net axi_uartlite_0_TX_pin LOC=B16 | IOSTANDARD = LVCMOS33;`
+
 - Finally, click the "Generate BitStream" button to create your hardware bitfile.  Note: This process will take about 10 minutes!  For a more complicated design, it can take hours or days.
 
 ## Write Simple Software
