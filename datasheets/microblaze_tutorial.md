@@ -45,34 +45,46 @@ The steps in this section will guide you through the process of creating a hardw
 
 ![](remove_peripherals.jpg)
 
-5. There are three main tabs under the “System Assembly View” that you will work with.
+5. There are three main tabs under the "System Assembly View" that you will work with.
+
+![](system_assembly_view.jpg)
 
   a. Bus Interfaces - This is where you will connect your peripherals to various busses.  For our design, everything will be connected to the same bus as the MicroBlaze processor.
   b. Ports - This is where you define how the input/output ports from the various peripherals connect to FPGA pins.  The names of the pins/ports are listed under this tab, but you still have to modify the UCF to specify which physical pin you are connected to on the FPGA.
   c. Addresses - This is where you specify the memory-mapped address range for each peripheral.  You need to be careful to give a large enough address block to cover all the software registers available in that peripheral.  For peripherals you have not created, you can look at the datasheet for help on the needed memory size.
 6. There are two tabs under the side window that are also useful.
 
-a. IP Catalog – this is a list of available peripherals that you can connect to your MicroBlaze processor.  We will use the “UART Lite” peripheral to communicate our UART-to-USB connection your computer.
-b. Project – This is where you can access the “raw” files that Platform Studio manages for you
-i. UCF File – where you name/configure the FPGA pins
-ii. MHS File – where the peripherals configuration is stored (address, ports, bus, etc.)
-7. Add an “AXI UART (Lite)” peripheral from the IP Catalog
+![](tabs.jpg)
 
-a. Baud Rate: 9600
-b. Number of Bits: 8
-c. Parity: False
-8. Under the “Bus Interfaces” tab, ensure the axi_uartlite_0 peripheral is connected to the same bus as MicroBlaze.  This lets the UART module communicate with your MicroBlaze processor.
+  a. IP Catalog - this is a list of available peripherals that you can connect to your MicroBlaze processor.  We will use the "UART Lite" peripheral to communicate our UART-to-USB connection your computer.
+  b. Project - This is where you can access the "raw" files that Platform Studio manages for you
+    i. UCF File - where you name/configure the FPGA pins
+    ii. MHS File - where the peripherals configuration is stored (address, ports, bus, etc.)
+7. Add an "AXI UART (Lite)" peripheral from the IP Catalog
+
+![](ip_catalog.jpg)
+
+  a. Baud Rate: 9600
+  b. Number of Bits: 8
+  c. Parity: False
+8. Under the "Bus Interfaces" tab, ensure the `axi_uartlite_0` peripheral is connected to the same bus as MicroBlaze.  This lets the UART module communicate with your MicroBlaze processor.
+
+![](bus_interfaces.jpg)
 
 9. Under the “Ports” tab, connect the RX and TX lines for the axi_uartlite_0 to external pins.  This just gives the name of the port to look for in the UCF file.
 
+![](ports.jpg)
+
 10.  Under the “Addresses” tab, change the base address for xps_uartlite_0 to 0x84000000 with a size of 64K
 
-11. Finally, add the following lines to the UCF file so that the UART peripheral knows which pins to use for RX and TX:
-net axi_uartlite_0_RX_pin LOC=A16 | IOSTANDARD = LVCMOS33;
-net axi_uartlite_0_TX_pin LOC=B16 | IOSTANDARD = LVCMOS33;
-12. Finally, click the “Generate BitStream” button to create your hardware bitfile.  Note: This process will take about 10 minutes!  For a more complicated design, it can take hours or days.
+![](addresses.jpg)
 
-1.5 Write Simple Software
+11. Finally, add the following lines to the UCF file so that the UART peripheral knows which pins to use for RX and TX:
+`net axi_uartlite_0_RX_pin LOC=A16 | IOSTANDARD = LVCMOS33;`
+`net axi_uartlite_0_TX_pin LOC=B16 | IOSTANDARD = LVCMOS33;`
+12. Finally, click the "Generate BitStream" button to create your hardware bitfile.  Note: This process will take about 10 minutes!  For a more complicated design, it can take hours or days.
+
+## Write Simple Software
 Now that the hardware is designed, you can write software to run on your embedded MicroBlaze hardware platform.  In this section, you will write the needed C code to interface with MicroBlaze and its UART peripheral.
 1. Click the “Export Design” button, and then select “Export & Launch SDK.”  Make sure the “Include bitstream and BMM” checkbox is checked.
 
