@@ -183,7 +183,7 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 
 - You do not need to create a simulation platform for this example.
 
--. Check the "Generate ISE and XST project files..." checkbox.
+- Check the "Generate ISE and XST project files..." checkbox.
 
 - Click Finish
 
@@ -226,6 +226,7 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
   - Under the "Ports" tab, make an external connection for your peripheral’s LED port.
 
   - Add the following lines to your UCF file:
+
 `net microblaze_tutorial_0_LED_pin(7) LOC=N12 | IOSTANDARD = LVCMOS33;`
 `net microblaze_tutorial_0_LED_pin(6) LOC=P16 | IOSTANDARD = LVCMOS33;`
 `net microblaze_tutorial_0_LED_pin(5) LOC=D4 | IOSTANDARD = LVCMOS33;`
@@ -234,6 +235,7 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 `net microblaze_tutorial_0_LED_pin(2) LOC=N14 | IOSTANDARD = LVCMOS33;`
 `net microblaze_tutorial_0_LED_pin(1) LOC=M14 | IOSTANDARD = LVCMOS33;`
 `net microblaze_tutorial_0_LED_pin(0) LOC=U18 | IOSTANDARD = LVCMOS33; `
+
   - Under the "Addresses" tab, change the base address for your custom peripheral to 0x83000000 with a size of 64K.
 
   - Note: If you ever make changes to your peripheral (pao, vhdl, mpd, etc.), you can update your XPS project by going to Project → Rescan User Repositories
@@ -246,8 +248,12 @@ Finally, you will write software that reads in a value from UART, echoes that va
 
 - Confirm that you want to import the new bitfile and design to your SDK project.
 - Add the following lines to your main.c file, where you deem appropriate:
-`#include <xil_io.h>`
-`Xil_Out32(0x83000000, c);`
+
+```c
+#include <xil_io.h>
+Xil_Out32(0x83000000, c);
+```
+
 - Program the FPGA with your new bitfile and elf file.
 - Run your favorite terminal program to verify that the FPGA is echoing your characters to your terminal and the LEDs.
 - Note: look through the "xil_io.h" file to see the different options you have to read from and write to memory.  These are just simple macros that provide you shortcuts to perform memory operations.  All of this should be review from when we first introduced you to the C programming language.
