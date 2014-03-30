@@ -188,7 +188,7 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 
 - Check the "Generate ISE and XST project files..." checkbox.
 
-![](gen_proj_files.jpg)
+![](gen_proj_files.png)
 
 - Click Finish
 
