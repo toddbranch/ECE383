@@ -11,10 +11,10 @@ You must complete the following installation items before you can follow the ste
 - Install Xilinx ISE 14.X System Edition.  This includes ISE Project Navigator, PlanAhead, Software Development Kit, and Platform Studio.
 - Download the Atlys_BSB_Support_v_3_6.zip from the Digilent Atlys support site.
   - Extract this folder to a permanent location on your computer.
-  - This tutorial assumes you have it extracted to: C:/Xilinx/Atlys_BSB_Support_v_3_6
+  - This tutorial assumes you have it extracted to: `C:/Xilinx/Atlys_BSB_Support_v_3_6`
 - From the Digilent website, download and install the "Digilent Plugin for Xilinx Tools."
   - The installation instructions are included as a PDF in the downloaded zip file.
-  - This is the most important paragraph in the installation instructions: *The Digilent Plug-in can be installed in the ISE installation directory by copying libCseDigilent.dll (libCseDigilent.so on Linux systems) and libCseDigilent.xml to the plugins directory. For the Windows version of ISE Design Suite, the typical location is C:\Xilinx\14.1\ISE_DS\ISE\lib\nt\plugins\Digilent\libCseDigilent. For 64-bit Windows, use nt64 inplace of nt.*
+  - This is the most important paragraph in the installation instructions: *The Digilent Plug-in can be installed in the ISE installation directory by copying libCseDigilent.dll (libCseDigilent.so on Linux systems) and libCseDigilent.xml to the plugins directory. For the Windows version of ISE Design Suite, the typical location is `C:\Xilinx\14.1\ISE_DS\ISE\lib\nt\plugins\Digilent\libCseDigilent`. For 64-bit Windows, use nt64 inplace of nt.*
 
 ## Create Basic Hardware Platform (UART)
 
@@ -149,25 +149,25 @@ Now that we have learned how to work with pre-built hardware IP peripherals, you
 
 9. You do not need to create a simulation platform for this example.
 
-10. Check the "Generate ISE and XST project files…" checkbox.
+10. Check the "Generate ISE and XST project files..." checkbox.
 
 11. Click Finish
 
 12. You have created the custom peripheral.  Now you need to update the "user logic" in the peripheral to implement the functionality you desire.
-13. Using your file browser, go to the location you saved your repository.  In my case, this is: C:\Users\michael.tanner\Development\FPGA\ip_repo\MyProcessorIPLib\pcores\microblaze_tutorial_v1_00_a
+13. Using your file browser, go to the location you saved your repository.  In my case, this is: `C:\Users\michael.tanner\Development\FPGA\ip_repo\MyProcessorIPLib\pcores\microblaze_tutorial_v1_00_a`
 14. You will see three different folders that make up your custom peripheral:
-a. data - this contains the "settings" for your peripheral.  In particular, you may need to modify the *.mpd and *.pao files.  XPS uses these files to determine the "interface" to your custom IP peripheral.
-i. The *.mpd file can be used to specify "ports" that will be connected to FPGA pins under the "Ports" tab of XPS.
-ii. The *.pao file lists all the VHDL files you need to build your peripheral.  If you add a separate file (e.g., video synchronization), you need to list it in this file.  Order matters, so place the dependent files last.
+a. data - this contains the "settings" for your peripheral.  In particular, you may need to modify the `*.mpd` and `*.pao` files.  XPS uses these files to determine the "interface" to your custom IP peripheral.
+i. The `*.mpd` file can be used to specify "ports" that will be connected to FPGA pins under the "Ports" tab of XPS.
+ii. The `*.pao` file lists all the VHDL files you need to build your peripheral.  If you add a separate file (e.g., video synchronization), you need to list it in this file.  Order matters, so place the dependent files last.
 b. devel - this contains the automatically generated project navigator files to help you develop and simulate your hardware design.
 c. hdl - this contains the actual VHDL files that implement the logic of your design.  If you add VHDL files to the peripheral, this is the directory you place them in.
 15. To create our custom peripheral that allows up to write any value to the LEDs, we will take the following steps:
-a. Modify the *.mpd file to let XPS know about the "LED" port it can be connected to FPGA pins through your project’s UCF file.
+a. Modify the `*.mpd` file to let XPS know about the "LED" port it can be connected to FPGA pins through your project’s UCF file.
 b. Modify the "your_peripheral.vhd" (the name of your peripheral) to add the "LED" output and then connect it into the structural instantiation of your "user logic."
 c. Modify the "user_logic.vhd" file to include an LED output, and then connect one of the pre-created software registers to the LED output.
 d. Add the peripheral to our XPS design
 e. Generate the bitfile
-16. First we need to modify the *.mpd file to let XPS know about the "LED" port it can be connected to FPGA pins through your project’s UCF file.  Add the following line to your *.pao file in the "ports" section:
+16. First we need to modify the `*.mpd` file to let XPS know about the "LED" port it can be connected to FPGA pins through your project’s UCF file.  Add the following line to your `*.pao` file in the "ports" section:
 PORT LED = "", DIR = O, VEC=[7:0]
 17. Now we need to modify the "your_peripheral.vhd" (the name of your peripheral) to add the "LED" output and then connect it into the structural instantiation of your "user logic."
 a. In the entity definition for your top-level peripheral VHDL file, find the "ADD USER PORTS BELOW THIS LINE" comment.  Add the following port:
@@ -183,7 +183,7 @@ c. At this point, you have completed the custom logic for your peripheral.  Howe
 i. The first process is used to write to software registers.  In other words, the software is writing a value, and your user logic is storing it into one of the "slv_reg*" registers.
 ii. The second process is used to read from software registers.  In other words, the software is reading a value, and your user logic is writing the  "slv_reg*" register  value onto the data bus.
 iii. In the next lab (and probably your final project), you will need to modify this slave register read/write logic to implement the required functionality.
-iv. In addition, you may need to structurally instantiate some other logic you have created.  Be sure you update your *.pao file to include any additional VHDL files required in your design.  Also, make sure your files are in the correct library.
+iv. In addition, you may need to structurally instantiate some other logic you have created.  Be sure you update your `*.pao` file to include any additional VHDL files required in your design.  Also, make sure your files are in the correct library.
 19. Add the peripheral to our XPS design
 a. From the IP catalog, add your peripheral
 
