@@ -21,25 +21,35 @@ You must complete the following installation items before you can follow the ste
 The steps in this section will guide you through the process of creating a hardware platform for your embedded FPGA design.  The ultimate product is a bitfile you can use to download to your FPGA.
 
 1. Open Xilinx Platform Studio
-![Open Platform Studio](open_platform_studio.jpg)
-2. Click “Create New Project Using Base System Builder”
-![](new_project.jpg)
-3. In the first window of the wizard:
-![](first_window.jpg)
-  a. Under “New Project,” browse to the folder you would like to save your project files.  Note: This does not create a subdirectory for you!
-  b. Select the “AXI System” as your interconnect type
-  c. Under “Set Project Peripheral Repository Search Path,” enter the location you extracted the Atlys support zip file.  Note: You must select the “Atlys_AXI*/lib” subdirectory.
-  d. Click “OK”
-4. Now you enter into the Base System Builder wizard setup, which is specific to the Atlys board.  This wizard will set which board you are working with, how to configure the MicroBlaze processor(s), and which peripherals you will need.  In general, leave everything to their default values, except where noted here.
-a. First window: Select the Digilint Atlys board, Revision C
 
-b. Second window: Remove all the peripherals in the bottom portion of the window. 
+![Open Platform Studio](open_platform_studio.jpg)
+
+2. Click “Create New Project Using Base System Builder”
+
+![](new_project.jpg)
+
+3. In the first window of the wizard:
+
+![](first_window.jpg)
+
+  a. Under "New Project," browse to the folder you would like to save your project files.  Note: This does not create a subdirectory for you!
+  b. Select the "AXI System" as your interconnect type
+  c. Under "Set Project Peripheral Repository Search Path," enter the location you extracted the Atlys support zip file.  Note: You must select the "Atlys_AXI*/lib" subdirectory.
+  d. Click "OK"
+4. Now you enter into the Base System Builder wizard setup, which is specific to the Atlys board.  This wizard will set which board you are working with, how to configure the MicroBlaze processor(s), and which peripherals you will need.  In general, leave everything to their default values, except where noted here.
+  a. First window: Select the Digilint Atlys board, Revision C
+
+![](atlys_rev_c.jpg)
+
+  b. Second window: Remove all the peripherals in the bottom portion of the window. 
+
+![](remove_peripherals.jpg)
 
 5. There are three main tabs under the “System Assembly View” that you will work with.
 
-a. Bus Interfaces – This is where you will connect your peripherals to various busses.  For our design, everything will be connected to the same bus as the MicroBlaze processor.
-b. Ports – This is where you define how the input/output ports from the various peripherals connect to FPGA pins.  The names of the pins/ports are listed under this tab, but you still have to modify the UCF to specify which physical pin you are connected to on the FPGA.
-c. Addresses – This is where you specify the memory-mapped address range for each peripheral.  You need to be careful to give a large enough address block to cover all the software registers available in that peripheral.  For peripherals you have not created, you can look at the datasheet for help on the needed memory size.
+  a. Bus Interfaces - This is where you will connect your peripherals to various busses.  For our design, everything will be connected to the same bus as the MicroBlaze processor.
+  b. Ports - This is where you define how the input/output ports from the various peripherals connect to FPGA pins.  The names of the pins/ports are listed under this tab, but you still have to modify the UCF to specify which physical pin you are connected to on the FPGA.
+  c. Addresses - This is where you specify the memory-mapped address range for each peripheral.  You need to be careful to give a large enough address block to cover all the software registers available in that peripheral.  For peripherals you have not created, you can look at the datasheet for help on the needed memory size.
 6. There are two tabs under the side window that are also useful.
 
 a. IP Catalog – this is a list of available peripherals that you can connect to your MicroBlaze processor.  We will use the “UART Lite” peripheral to communicate our UART-to-USB connection your computer.
