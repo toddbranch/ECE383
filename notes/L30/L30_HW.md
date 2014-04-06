@@ -5,9 +5,7 @@
   - If we improve the DFF by reducing ![lower omega](w.jpg) by 10%, discuss the effect on MTBF.
   - If we improve the DFF by reducing ![lower tau](T.jpg) by 10%, discuss the effect on MTBF.
 - A two-FF synchronizer is shown in the below diagram.  Determine the new MTBF for below scenarios assuming the following parameters:
-
 ![Table](table.jpg)
-
   - The placement and routing process adds a `2.5ns` wiring delay.
   - The system clock rate is decreased by 10%.
   - The setup time of the DFF is reduced by 10%.
