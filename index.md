@@ -30,7 +30,7 @@ title = 'Embedded Systems II with the Digilent Atlys'
 | [L22](/notes/L22) | [FPGA Design for Area, Power, or Speed](http://slides.ECE383.com/ECE383_slides/L22) | [L22 Assignment](/notes/L22/L22_HW.html) | [L21 Assignment](/notes/L21/L21_HW.html) |
 | L23 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [L22 Assignment](/notes/L22/L22_HW.html), [Lab 4a](/labs/lab4) Prelab |
 | L24 | [Lab 4a - Remote Terminal (PicoBlaze)](/labs/lab4) | | [Lab 4a](/labs/lab4) Functionality |
-| [L25](/notes/L25) | MicroBlaze Introduction | | |
+| [L25](/notes/L25) | [MicroBlaze Introduction](/datasheets/microblaze_tutorial.html) | | |
 | L26 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Prelab |
 | L27 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | |
 | L28 | [Lab 4b - Remote Terminal (MicroBlaze)](/labs/lab4) | | [Lab 4b](/labs/lab4) Functionality |
