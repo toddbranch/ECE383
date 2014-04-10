@@ -1,17 +1,10 @@
-# L30 Homework
+# L31 Homework
 
-- Assume that a sequential system with an ideal clock signal can operate at a maximal clock rate of `100 MHz`.  If the physical clock distribution network introduces a `1.5ns` clock skew, what is the new maximal clock rate?
-- Consider a DFF with ![lower omega](w.jpg) and ![lower tau](T.jpg).
-  - If we improve the DFF by reducing ![lower omega](w.jpg) by 10%, discuss the effect on MTBF.
-  - If we improve the DFF by reducing ![lower tau](T.jpg) by 10%, discuss the effect on MTBF.
-- A two-FF synchronizer is shown in the below diagram.  Determine the new MTBF for below scenarios assuming the following parameters:
-![Table](table.jpg)
-  - The placement and routing process adds a `2.5ns` wiring delay.
-  - The system clock rate is decreased by 10%.
-  - The setup time of the DFF is reduced by 10%.
-  - The ![lower tau](T.jpg) of the DFF is reduced by 10%.
-
-![Synchronizers](synchronizers.jpg)
+- Repetitive-subtraction division is an algorithm to implement division operation.  Let `a` and `b` be the dividend and divisor respectively.  This algorithm obtains the quotient (`q`) and the remainder (`r`) by subtracting `b` from `a` repeatedly until the remaining of `a` is smaller than `b`.  Assume that all signals are 8-bits wide and interpreted as unsigned integers.
+  - Derive a pseudo algorithm.
+  - Derive a detailed conceptual diagram.
+  - Derive the VHDL code according to the blocks of the conceptual diagram (i.e., in multi-segment style).
+  - Is this an efficient algorithm? Explain.
 
 ## Turn-In Requirements
 
