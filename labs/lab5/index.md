@@ -37,6 +37,7 @@ You have already submitted a project proposal on L21 and received feedback.  You
 - [ ] Final proposal contains appropriate functionality levels and descriptions
 - [ ] Student has the requisite hardware for the proposed project
 - [ ] Student has developed a reasonable, detailed schedule
+- [ ] Student has developed an initial design
 - [ ] Student is prepared to begin work
 
 ## Final Presentation
