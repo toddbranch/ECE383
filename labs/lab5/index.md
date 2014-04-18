@@ -52,7 +52,7 @@ Your final presentation should last between 5 to 10 minutes (including demo and 
 
 ## Video
 
-Each student must produce a 30 second video clip showcasing their project - this will be worth 5pts of your final grade.
+Each student must produce a 30 second video clip showcasing their project - this will be worth 5pts of your final grade.  The final video should be posted on YouTube - include a link to it in your README.
 
 ## Grading
 
